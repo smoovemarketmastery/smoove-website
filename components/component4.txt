@@ -1,0 +1,69 @@
+<!-- ============================================================
+   COMPONENT 4: PRICING
+   Three plans: Indicators Only (monthly), Indicators Only (yearly),
+   Course + Indicators (monthly).
+   ============================================================ -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Simple, <span class="text-green">Transparent</span> Pricing</h2>
+    <p class="section-sub">No upsells. No hidden fees. Pick the plan that fits where you are right now.</p>
+
+    <div class="pricing-grid">
+
+      <!-- Indicators Only Monthly -->
+      <div class="price-card">
+        <div class="price-tier">Indicators Only</div>
+        <div class="price-amount"><span class="price-dollar">$</span>125<span class="price-period">/mo</span></div>
+        <p class="price-desc">Access to all $moove TradingView indicators built for NQ &amp; ES futures traders. Cancel anytime.</p>
+        <ul class="price-features">
+          <li><span class="check">&#10003;</span> All TradingView indicators</li>
+          <li><span class="check">&#10003;</span> Futures-optimized signals</li>
+          <li><span class="check">&#10003;</span> Key level &amp; session tools</li>
+          <li><span class="check">&#10003;</span> Ongoing indicator updates</li>
+          <li class="price-no"><span class="cross">&#10007;</span> Trading course</li>
+          <li class="price-no"><span class="cross">&#10007;</span> Community access</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline w-full">Get Indicators</a>
+      </div>
+
+      <!-- Indicators Only Yearly — Best Value -->
+      <div class="price-card price-card-highlight">
+        <div class="price-popular">Best Value</div>
+        <div class="price-tier">Indicators Only</div>
+        <div class="price-amount"><span class="price-dollar">$</span>997<span class="price-period">/yr</span></div>
+        <div class="price-save">Save $503 vs monthly &mdash; ~$83/mo</div>
+        <p class="price-desc">Lock in the lowest rate on all $moove indicators with one annual payment.</p>
+        <ul class="price-features">
+          <li><span class="check">&#10003;</span> All TradingView indicators</li>
+          <li><span class="check">&#10003;</span> Futures-optimized signals</li>
+          <li><span class="check">&#10003;</span> Key level &amp; session tools</li>
+          <li><span class="check">&#10003;</span> Ongoing indicator updates</li>
+          <li><span class="check">&#10003;</span> Priority support</li>
+          <li class="price-no"><span class="cross">&#10007;</span> Trading course</li>
+          <li class="price-no"><span class="cross">&#10007;</span> Community access</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary w-full">Get Annual Access</a>
+      </div>
+
+      <!-- Course + Indicators -->
+      <div class="price-card">
+        <div class="price-tier">Course + Indicators</div>
+        <div class="price-amount"><span class="price-dollar">$</span>247<span class="price-period">/mo</span></div>
+        <p class="price-desc">The full $moove experience — structured course, active community, and all indicators. Everything you need to level up.</p>
+        <ul class="price-features">
+          <li><span class="check">&#10003;</span> All TradingView indicators</li>
+          <li><span class="check">&#10003;</span> Futures-optimized signals</li>
+          <li><span class="check">&#10003;</span> Key level &amp; session tools</li>
+          <li><span class="check">&#10003;</span> Ongoing indicator updates</li>
+          <li><span class="check">&#10003;</span> Full trading course</li>
+          <li><span class="check">&#10003;</span> Active community access</li>
+        </ul>
+        <a href="#contact" class="btn btn-gold w-full">Join Full Program</a>
+      </div>
+
+    </div>
+
+    <p class="pricing-note">All plans include access to the $moove EA Bot application pathway. Bot access is separate and by application only.</p>
+  </div>
+</section>
