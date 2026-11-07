@@ -324,25 +324,6 @@ ul{list-style:none}
 .ind-tbl td{padding:3px 10px 3px 0;border-bottom:1px solid rgba(255,255,255,.04)}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 
-/* Discord mock */
-.dc-mock{width:100%;max-width:380px;background:#1e1f22;border-radius:8px;overflow:hidden;font-family:'DM Sans',sans-serif;box-shadow:0 8px 32px rgba(0,0,0,.5)}
-.dc-top{background:#2b2d31;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
-.dc-top-l{display:flex;align-items:center;gap:6px}
-.dc-hash{color:rgba(255,255,255,.6);font-size:18px;font-weight:700;line-height:1}
-.dc-ch{font-size:13px;font-weight:600;color:rgba(255,255,255,.85)}
-.dc-top-r{font-size:11px;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:5px}
-.dc-dot{width:7px;height:7px;border-radius:50%;background:#3ba55d;display:inline-block}
-.dc-body{padding:12px 0 0}
-.dc-msg{display:flex;gap:10px;padding:6px 14px;transition:background .15s}
-.dc-msg:hover{background:rgba(255,255,255,.03)}
-.dc-av{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;margin-top:2px}
-.dc-msg-r{flex:1;min-width:0}
-.dc-name{font-size:12px;font-weight:600;color:rgba(255,255,255,.7);margin-bottom:2px;display:flex;align-items:center;gap:6px}
-.dc-react{display:flex;gap:6px;margin-top:4px}
-.dc-react span{font-size:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:2px 7px;border-radius:4px;color:rgba(255,255,255,.6)}
-.dc-input{margin:10px 10px 10px;background:#383a40;border-radius:6px;padding:8px 12px;display:flex;align-items:center;gap:4px}
-.dc-input-ph{font-size:12px;color:rgba(255,255,255,.6)}
-.dc-cur{display:inline-block;width:2px;height:13px;background:rgba(255,255,255,.4);animation:blink 1s infinite;vertical-align:middle}
 
 /* ── PRICING ─────────────────────────────────────────────── */
 .pricing-sec{background:var(--bg);position:relative;overflow:hidden}
@@ -410,31 +391,6 @@ ul{list-style:none}
 .spec-r{display:flex;justify-content:space-between;padding:13px 16px;border-bottom:1px solid var(--b);font-family:var(--fm);font-size:11px}
 .spec-r:last-child{border-bottom:none}
 .spec-k{color:rgba(255,255,255,.6)}.spec-v{color:var(--text)}.spec-v.g{color:var(--g)}
-
-/* ── TESTIMONIALS ─────────────────────────────────────────── */
-.testi-sec{background:var(--bg2);border-top:1px solid var(--b)}
-.testi-h{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:52px;flex-wrap:wrap}
-.testi-h .sh{font-size:clamp(30px,4.5vw,52px)}
-.tcols{display:flex;gap:14px;max-height:640px;overflow:hidden;mask-image:linear-gradient(to bottom,transparent,black 10%,black 90%,transparent);-webkit-mask-image:linear-gradient(to bottom,transparent,black 10%,black 90%,transparent)}
-.col{display:flex;flex-direction:column;gap:10px;flex:1;min-width:0}
-.col:nth-child(2),.col:nth-child(3){display:none}
-.col-t{display:flex;flex-direction:column;gap:10px;animation:scUp 24s linear infinite}
-.col:nth-child(2) .col-t{animation-duration:30s;animation-direction:reverse}
-.col:nth-child(3) .col-t{animation-duration:20s}
-@keyframes scUp{from{transform:translateY(0)}to{transform:translateY(-50%)}}
-/* Discord-style cards */
-.tcard{background:#1e1f22;border:1px solid rgba(255,255,255,.06);padding:14px 16px;transition:background .2s;border-radius:2px}
-.tcard:hover{background:#232428}
-.dc-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.dc-av{width:38px;height:38px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#2b2d31}
-.dc-av.no-pic{display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:16px;font-weight:700;color:rgba(255,255,255,.6);background:#313338}
-.dc-meta{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
-.dc-name{font-family:var(--fm);font-size:11px;font-weight:700;color:#fff}
-.dc-role{font-family:var(--fm);font-size:11px;letter-spacing:.06em;padding:2px 7px;border-radius:3px;background:rgba(0,255,135,.15);color:var(--g);border:1px solid rgba(0,255,135,.2)}
-.dc-role.gold{background:rgba(255,179,0,.12);color:var(--gold);border-color:rgba(255,179,0,.2)}
-.dc-msg{font-size:13px;color:rgba(255,255,255,.7);line-height:1.75;padding-left:46px;margin-bottom:10px}
-.dc-reacts{display:flex;gap:6px;padding-left:46px;flex-wrap:wrap}
-.dc-r{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:3px 8px;font-size:11px;color:rgba(255,255,255,.6);font-family:var(--fm);font-size:11px}
 
 /* ── WORLD MAP ────────────────────────────────────────────── */
 .map-sec{background:var(--bg);overflow:hidden}
@@ -574,8 +530,6 @@ ul{list-style:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.34s}
 
 /* ── RESPONSIVE ─────────────────────────────────────────── */
-@media(min-width:900px){.col:nth-child(2){display:flex}}
-@media(min-width:1200px){.col:nth-child(3){display:flex}}
 @media(max-width:1060px){
   .nav,.nav.s{padding-left:28px;padding-right:28px}
   .nl{display:none;position:fixed;inset:0;background:rgba(4,4,10,.97);flex-direction:column;align-items:center;justify-content:center;gap:40px;z-index:100}
@@ -590,7 +544,6 @@ ul{list-style:none}
   .bot-banner{grid-template-columns:1fr;padding:40px 32px;gap:32px}
   .bot-banner::after{display:none}
   .footer-in{grid-template-columns:1fr 1fr}
-  .testi-h{flex-direction:column;align-items:flex-start}
   .edge-in{grid-template-columns:1fr}
   .fp{grid-template-columns:1fr}
   .fp-r{display:none}
@@ -1076,29 +1029,8 @@ ul{list-style:none}
   </div>
 </section>
 
-<!-- ═══ TESTIMONIALS ════════════════════════════════════════ -->
-<section class="sec testi-sec" id="community">
-  <div class="si">
-    <div class="testi-h rv">
-      <div>
-        <div class="ey">Community</div>
-        <h2 class="sh" style="font-size:clamp(30px,4.5vw,52px)">
-          <span style="color:var(--text)">What Members</span><br>
-          <span class="g">Are Saying.</span>
-        </h2>
-      </div>
-      <p class="ss" style="max-width:320px">Real traders. Real results. The community is active every session. Discord access is granted automatically after purchase.</p>
-    </div>
-    <div class="tcols">
-      <div class="col"><div class="col-t" id="col1"></div></div>
-      <div class="col"><div class="col-t" id="col2"></div></div>
-      <div class="col"><div class="col-t" id="col3"></div></div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ WORLD MAP ════════════════════════════════════════════ -->
-<section class="sec map-sec" id="global">
+<section class="sec map-sec" id="community">
   <div class="si">
     <div class="map-h rv">
       <div class="ey">Global Community</div>
@@ -1413,45 +1345,6 @@ if(!RM&&typeof tsParticles!=='undefined'){
     }
   });
 }
-
-/* ── TESTIMONIALS ──────────────────────────────────────── */
-(function(){
-  const ts=[
-    {q:'Smoove QT + Macros completely changed how I approach NQ. I can finally see the quarterly cycle playing out in real time instead of guessing direction.',n:'jake_nq',r:'Member',rc:[['🔥','14'],['💯','6']]},
-    {q:'Pre-market prep in the Discord every single morning. $moove calls the bias, levels are already marked — I just wait for the setup.',n:'dom_es',r:'Member',rc:[['📈','11'],['🔥','9']]},
-    {q:'Smoove QT SSMT is the one. Watching NQ and ES diverge to confirm manipulation — it\'s a completely different level of clarity.',n:'marcus_futures',r:'Full Program',rc:[['💯','17'],['🔥','12']]},
-    {q:'The course doesn\'t waste your time. It builds on what you already know and fills in the gaps that were costing me money every session.',n:'caleb_j',r:'Full Program',rc:[['✅','8'],['💯','5']]},
-    {q:'Smoove PO3 on the 15 min NQ chart with Inducement Macros — once you see it you can\'t unsee it. Been using this combo every single day.',n:'tanya_trades',r:'Member',rc:[['🔥','21'],['📈','13']]},
-    {q:'Applied for bot access after about 60 days. The fact that it\'s not just handed out makes you actually take your trading seriously first.',n:'marcus_p',r:'EA Bot',rc:[['💯','19'],['🔥','15']],rg:'gold'},
-    {q:'Went annual on the indicators. $83 a month for 5 tools built around ICT methodology on NQ and ES — genuinely the best ROI in my trading setup.',n:'dre_fx',r:'Member',rc:[['💯','9'],['✅','7']]},
-    {q:'Smoove QT + Macros runs on my chart every session. Everything else got deleted. The noise is gone.',n:'ryan_scalps',r:'Member',rc:[['🔥','25'],['💯','11']]},
-    {q:'Been trading ES for 4 years. Smoove AMDX is the first tool I\'ve seen that actually maps the macro cycle to intraday price action properly.',n:'dk_futures',r:'Full Program',rc:[['📈','16'],['🔥','10']]},
-    {q:'Community is what makes this different. 200+ traders all running the same framework — when the bias lines up everyone sees it together.',n:'keisha_nq',r:'Full Program',rc:[['💯','13'],['🔥','8']]},
-    {q:'Smoove Inducement Macros is doing exactly what it says. I stopped fighting the trend after the first week of using it.',n:'brandon_es',r:'Member',rc:[['✅','10'],['📈','7']]},
-    {q:'Most TradingView indicator packs are stock indicators with a futures label slapped on. These are built differently — you feel it immediately on NQ.',n:'nadia_v',r:'Member',rc:[['🔥','18'],['💯','9']]},
-  ];
-  const grps=[ts.slice(0,4),ts.slice(4,8),ts.slice(8,12)];
-  ['col1','col2','col3'].forEach((id,ci)=>{
-    const track=document.getElementById(id);if(!track)return;
-    [...grps[ci],...grps[ci]].forEach(t=>{
-      const el=document.createElement('div');el.className='tcard';
-      const roleClass=t.rg==='gold'?'dc-role gold':'dc-role';
-      const reacts=t.rc.map(([e,c])=>`<span class="dc-r">${e} ${c}</span>`).join('');
-      const avHtml=`<div class="dc-av no-pic">${t.n[0].toUpperCase()}</div>`;
-      el.innerHTML=`
-        <div class="dc-top">
-          ${avHtml}
-          <div class="dc-meta">
-            <span class="dc-name">${t.n}</span>
-            <span class="${roleClass}">${t.r}</span>
-          </div>
-        </div>
-        <div class="dc-msg">${t.q}</div>
-        <div class="dc-reacts">${reacts}</div>`;
-      track.appendChild(el);
-    });
-  });
-})();
 
 /* ── INDICATOR SHOWCASE CAROUSEL ───────────────────────── */
 var iscIdx=0,iscTotal=3;
