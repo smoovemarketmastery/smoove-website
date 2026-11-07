@@ -4,31 +4,31 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>$moove Market Mastery | Futures, FX & Metals Trading</title>
-<meta name="description" content="$moove Market Mastery — NQ & ES focused futures trading education with tools that work across Futures, FX & Metals. Community, proprietary indicators, and EA bot access."/>
-<link rel="icon" type="image/png" href="images/logo.png"/>
-<link rel="apple-touch-icon" href="images/logo.png"/>
+<meta name="description" content="NQ &amp; ES futures trading education: proprietary TradingView indicators, a structured course, an active community and MT5 bot access."/>
+<link rel="canonical" href="https://smoovemarketmastery.github.io/smoove-website/"/>
+<link rel="icon" type="image/png" href="images/logo-192.png"/>
+<link rel="apple-touch-icon" href="images/logo-192.png"/>
 <meta name="theme-color" content="#04040A"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="$moove Market Mastery | Futures, FX &amp; Metals Trading"/>
 <meta property="og:description" content="Proprietary indicators. Structured curriculum. Active community. MT5 bot access. NQ &amp; ES focused — built for serious futures traders ready to stop guessing."/>
-<meta property="og:image" content="https://smoovemarketmastery.github.io/smoove-website/images/community-hero.png"/>
+<meta property="og:image" content="https://smoovemarketmastery.github.io/smoove-website/images/community-hero.jpg"/>
 <meta property="og:url" content="https://smoovemarketmastery.github.io/smoove-website/"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="$moove Market Mastery | Futures, FX &amp; Metals Trading"/>
 <meta name="twitter:description" content="Proprietary indicators. Structured curriculum. Active community. MT5 bot access. NQ &amp; ES focused — built for serious futures traders ready to stop guessing."/>
-<meta name="twitter:image" content="https://smoovemarketmastery.github.io/smoove-website/images/community-hero.png"/>
+<meta name="twitter:image" content="https://smoovemarketmastery.github.io/smoove-website/images/community-hero.jpg"/>
 
-<script type="importmap">
+<script type="application/ld+json">
 {
-  "imports": {
-    "three":         "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.min.js",
-    "three/webgpu":  "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.webgpu.js",
-    "three/tsl":     "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.tsl.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
-  }
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "$moove Market Mastery",
+ "url": "https://smoovemarketmastery.github.io/smoove-website/",
+ "logo": "https://smoovemarketmastery.github.io/smoove-website/images/logo-192.png",
+ "description": "NQ & ES futures trading education: proprietary TradingView indicators, a structured course, an active community and MT5 bot access."
 }
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
@@ -37,6 +37,7 @@
 /* ── RESET & BASE ─────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+img{height:auto}
 :root{
   --g:#00FF87;--g2:#00CC6A;--g3:rgba(0,255,135,.08);
   --gold:#FFB300;--gold2:#cc8f00;
@@ -48,7 +49,7 @@ html{scroll-behavior:smooth}
   --fm:'Space Mono',monospace;
   --fb:'DM Sans',sans-serif;
 }
-.skip-link{position:absolute;top:-100%;left:20px;padding:12px 24px;background:var(--g);color:#000;font-family:var(--fm);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;z-index:9999;transition:top .2s}
+.skip-link{position:absolute;top:-100%;left:20px;padding:12px 24px;background:var(--g);color:#000;font-family:var(--fm);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;z-index:9999;transition:top .2s}
 .skip-link:focus{top:8px}
 body{font-family:var(--fb);background:var(--bg);color:var(--text);overflow-x:hidden}
 a{text-decoration:none;color:inherit}
@@ -62,26 +63,26 @@ ul{list-style:none}
 
 /* ── SHARED BUTTONS ─────────────────────────────────────── */
 .btn-p{
-  font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
   padding:15px 36px;background:var(--g);color:#000;font-weight:700;
   display:inline-block;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;
 }
-.btn-p:hover{background:var(--g2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,255,135,.3)}
+.btn-p:hover{background:var(--g2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.45)}
 .btn-gh{
-  font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
-  padding:14px 36px;border:1px solid rgba(255,255,255,.13);color:rgba(255,255,255,.55);
+  font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  padding:14px 36px;border:1px solid rgba(255,255,255,.13);color:rgba(255,255,255,.6);
   display:inline-block;cursor:pointer;transition:all .2s;
 }
 .btn-gh:hover{border-color:rgba(0,255,135,.4);color:var(--g)}
 .btn-gd{
-  font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
   padding:14px 32px;background:var(--gold);color:#000;font-weight:700;
   display:inline-block;cursor:pointer;transition:background .2s,transform .15s;
 }
 .btn-gd:hover{background:var(--gold2);transform:translateY(-2px)}
 .btn-sm{
-  font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
-  padding:13px 28px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.45);
+  font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  padding:13px 28px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.6);
   display:inline-block;cursor:pointer;transition:all .2s;
 }
 .btn-sm:hover{border-color:rgba(0,255,135,.3);color:var(--g)}
@@ -101,15 +102,15 @@ ul{list-style:none}
   border-bottom-color:rgba(255,255,255,.04);
 }
 .nb{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.06em;display:flex;align-items:center;gap:0;position:relative;padding-left:14px}
-.nb::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:22px;background:var(--g);box-shadow:0 0 10px rgba(0,255,135,.8)}
-.nb-d{color:var(--g);text-shadow:0 0 28px rgba(0,255,135,.9),0 0 56px rgba(0,255,135,.3)}
+.nb::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:22px;background:var(--g)}
+.nb-d{color:var(--g)}
 .nb-m{color:var(--text)}
-.nb-s{font-family:var(--fm);font-size:7px;font-weight:400;color:rgba(255,255,255,.95);letter-spacing:.22em;margin-left:12px;text-transform:uppercase;align-self:center}
+.nb-s{font-family:var(--fm);font-size:11px;font-weight:400;color:rgba(255,255,255,.95);letter-spacing:.22em;margin-left:12px;text-transform:uppercase;align-self:center}
 .nl{display:flex;gap:40px;align-items:center}
-.nl a{font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color .2s}
+.nl a{font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);transition:color .2s}
 .nl a:hover{color:var(--g)}
 .nc{
-  font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+  font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
   padding:10px 26px;border:1px solid rgba(0,255,135,.35);color:var(--g);
   transition:all .2s;cursor:pointer;display:inline-block;
 }
@@ -143,14 +144,13 @@ ul{list-style:none}
 /* Hero badge */
 .h-badge{
   display:inline-flex;align-items:center;gap:7px;
-  font-family:var(--fm);font-size:7px;letter-spacing:.18em;text-transform:uppercase;
+  font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
   color:var(--g);border:1px solid rgba(0,255,135,.18);padding:5px 13px;
   background:rgba(0,255,135,.03);margin-bottom:32px;
   opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s;
 }
 .h-badge.on{opacity:1;transform:none}
-.h-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--g);animation:pulse 1.6s ease infinite}
-@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,255,135,.5)}50%{opacity:.4;box-shadow:0 0 0 4px rgba(0,255,135,0)}}
+.h-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--g)}
 
 /* Hero headline */
 .h-head{
@@ -163,7 +163,7 @@ ul{list-style:none}
   font-size:clamp(22px,3.2vw,48px);line-height:1;letter-spacing:.04em;
   white-space:nowrap;
 }
-.h-hl .g{color:var(--g);text-shadow:0 0 30px rgba(0,255,135,.3)}
+.h-hl .g{color:var(--g)}
 .h-hl .w{color:rgba(255,255,255,.82)}
 @media(max-width:640px){.h-hl{white-space:normal;font-size:clamp(20px,5.5vw,32px)}}
 
@@ -174,11 +174,11 @@ ul{list-style:none}
 }
 .h-divider.on{opacity:1}
 .h-divider::before,.h-divider::after{content:'';flex:0 0 40px;height:1px;background:rgba(0,255,135,.25)}
-.h-divider span{font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.h-divider span{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 
 .h-copy{
-  font-size:13px;color:rgba(255,255,255,.65);line-height:1.8;
-  max-width:520px;margin-bottom:40px;font-weight:400;
+  font-size:16px;color:rgba(255,255,255,.65);line-height:1.8;
+  max-width:580px;margin-bottom:40px;font-weight:400;
   opacity:0;transform:translateY(10px);transition:opacity .5s .3s,transform .5s .3s;
 }
 .h-copy.on{opacity:1;transform:none}
@@ -199,7 +199,7 @@ ul{list-style:none}
 .hst{padding:16px 28px;display:flex;flex-direction:column;gap:4px;border-right:1px solid rgba(0,255,135,.06)}
 .hst:last-child{border-right:none}
 .hst-v{font-family:var(--fd);font-size:19px;font-weight:700;color:var(--g);line-height:1}
-.hst-l{font-family:var(--fm);font-size:6px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.hst-l{font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 
 /* ── TICKER ──────────────────────────────────────────────── */
 .ticker{
@@ -211,9 +211,9 @@ ul{list-style:none}
 .ticker-t{
   display:flex;align-items:center;gap:24px;width:max-content;white-space:nowrap;
   animation:tick 38s linear infinite;
-  font-family:var(--fm);font-size:10px;letter-spacing:.18em;color:rgba(0,255,135,.32);
+  font-family:var(--fm);font-size:11px;letter-spacing:.18em;color:rgba(0,255,135,.75);
 }
-.ticker-t strong{color:rgba(0,255,135,.6)}
+.ticker-t strong{color:rgba(0,255,135,.75)}
 .ticker-t .sep{color:rgba(0,255,135,.14);font-size:5px}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -221,15 +221,15 @@ ul{list-style:none}
 .sec{padding:108px 60px}
 .si{max-width:1280px;margin:0 auto}
 .ey{
-  font-family:var(--fm);font-size:9px;letter-spacing:.24em;text-transform:uppercase;
+  font-family:var(--fm);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
   color:var(--g);margin-bottom:14px;display:flex;align-items:center;gap:10px;
 }
-.ey::before{content:'//';color:rgba(0,255,135,.18);letter-spacing:0}
+.ey::before{content:'//';color:rgba(0,255,135,.75);letter-spacing:0}
 .map-h .ey,.pr-in .ey{justify-content:center}
 .sh{font-family:var(--fd);font-weight:700;text-transform:uppercase;line-height:.9;letter-spacing:-.01em}
 .sh .g{color:var(--g)}
 .sh .gd{color:var(--gold)}
-.ss{font-size:13px;color:rgba(255,255,255,.62);line-height:1.82;font-weight:400}
+.ss{font-size:15px;color:rgba(255,255,255,.62);line-height:1.82;font-weight:400}
 
 /* ── PILLARS ─────────────────────────────────────────────── */
 .pillars-sec{background:var(--bg2);border-bottom:1px solid var(--b)}
@@ -254,16 +254,15 @@ ul{list-style:none}
 .gc:hover{background:var(--card2)}
 .gc:hover::after,.gc.feat::after{transform:scaleX(1)}
 .gc.feat{background:var(--card2)}
-.gc-num{display:none}
-.gc-badge{font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#000;background:var(--g);padding:3px 10px;display:inline-block;position:absolute;top:16px;left:34px;z-index:2}
+.gc-badge{font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#000;background:var(--g);padding:3px 10px;display:inline-block;position:absolute;top:16px;left:34px;z-index:2}
 .gc-icon{width:40px;height:40px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,255,135,.18);background:rgba(0,255,135,.05)}
 .gc-icon svg{width:20px;height:20px;stroke:var(--g);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .gc h3{font-family:var(--fd);font-size:19px;font-weight:700;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:12px;color:var(--text)}
 .gc h3 .g{color:var(--g)}
-.gc p{font-size:13px;color:rgba(255,255,255,.82);line-height:1.82;margin-bottom:22px}
-.pl li{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.78);padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;gap:9px}
+.gc p{font-size:15px;color:rgba(255,255,255,.82);line-height:1.82;margin-bottom:22px}
+.pl li{font-family:var(--fm);font-size:13px;color:rgba(255,255,255,.78);padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;gap:9px}
 .pl li:last-child{border-bottom:none}
-.pl li::before{content:'→';color:var(--g);font-size:9px}
+.pl li::before{content:'→';color:var(--g);font-size:11px}
 
 /* Bot banner */
 .bot-banner{
@@ -273,18 +272,18 @@ ul{list-style:none}
 }
 .bot-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 0% 50%,rgba(255,179,0,.025),transparent)}
 .bot-banner::after{content:'XAUUSD';position:absolute;right:-10px;bottom:-36px;font-family:var(--fd);font-size:130px;font-weight:900;letter-spacing:-.05em;color:rgba(255,179,0,.022);pointer-events:none}
-.bb-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:7px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,179,0,.2);padding:4px 10px;margin-bottom:16px}
-.bb-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);animation:pulse 1.6s ease infinite}
+.bb-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,179,0,.2);padding:4px 10px;margin-bottom:16px}
+.bb-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold)}
 .bb-title{font-family:var(--fd);font-size:clamp(20px,3.2vw,42px);font-weight:700;text-transform:uppercase;line-height:.9;letter-spacing:-.02em;margin-bottom:14px;white-space:nowrap}
 .bb-title .g{color:var(--g)}.bb-title .gd{color:var(--gold)}
-.bb-desc{font-size:13px;color:rgba(255,255,255,.85);line-height:1.82;margin-bottom:32px;max-width:430px}
+.bb-desc{font-size:15px;color:rgba(255,255,255,.85);line-height:1.82;margin-bottom:32px;max-width:430px}
 .bb-btns{display:flex;gap:12px;flex-wrap:wrap}
 .bot-panel{background:rgba(0,0,0,.35);border:1px solid rgba(255,179,0,.09);padding:26px;position:relative;z-index:1}
-.bp-h{font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:8px}
-.bp-h::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);animation:pulse 1.6s ease infinite}
-.bp-r{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);font-family:var(--fm);font-size:10px}
+.bp-h{font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.bp-h::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.bp-r{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);font-family:var(--fm);font-size:11px}
 .bp-r:last-child{border-bottom:none}
-.bp-k{color:rgba(255,255,255,.52)}
+.bp-k{color:rgba(255,255,255,.6)}
 .bp-v{color:var(--text)}
 .bp-v.g{color:var(--g)}.bp-v.gd{color:var(--gold)}
 
@@ -292,7 +291,7 @@ ul{list-style:none}
 .ftabs-sec{background:var(--bg3);border-bottom:1px solid var(--b)}
 .ftabs-top{margin-bottom:44px}
 .ftabs-nav{display:flex;border-bottom:1px solid var(--b)}
-.ftb{font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;padding:14px 28px;background:none;border:none;border-right:1px solid var(--b);color:var(--muted);cursor:pointer;transition:all .2s;position:relative;display:flex;align-items:center;gap:8px}
+.ftb{font-family:var(--fm);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:14px 28px;background:none;border:none;border-right:1px solid var(--b);color:var(--muted);cursor:pointer;transition:all .2s;position:relative;display:flex;align-items:center;gap:8px}
 .ftb svg{width:14px;height:14px;stroke:currentColor;flex-shrink:0}
 .ftb:last-child{border-right:none}
 .ftb.on{color:var(--g);background:rgba(0,255,135,.022)}
@@ -304,48 +303,27 @@ ul{list-style:none}
 .fp-r{background:#000;padding:36px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
 .fp-r canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .fp-r>*:not(canvas){position:relative;z-index:1}
-.fp-ey{font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--g);margin-bottom:12px}
+.fp-ey{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--g);margin-bottom:12px}
 .fp-t{font-family:var(--fd);font-size:clamp(20px,2.6vw,32px);font-weight:700;text-transform:uppercase;letter-spacing:-.01em;line-height:.92;margin-bottom:12px}
 .fp-t .g{color:var(--g)}
-.fp-d{font-size:13px;color:rgba(255,255,255,.65);line-height:1.82;margin-bottom:22px}
+.fp-d{font-size:15px;color:rgba(255,255,255,.65);line-height:1.82;margin-bottom:22px}
 .fp-ul{display:flex;flex-direction:column;margin-bottom:28px}
-.fp-ul li{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.72);padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:9px}
+.fp-ul li{font-family:var(--fm);font-size:13px;color:rgba(255,255,255,.72);padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:9px}
 .fp-ul li:last-child{border-bottom:none}
-.fp-ul li::before{content:'→';color:var(--g);font-size:9px}
+.fp-ul li::before{content:'→';color:var(--g);font-size:11px}
 
 /* Terminal mock */
 .tmock{width:100%;max-width:380px;background:#000;border:1px solid rgba(0,255,135,.1)}
 .tmock-bar{background:rgba(0,255,135,.04);border-bottom:1px solid rgba(0,255,135,.07);padding:8px 12px;display:flex;align-items:center;gap:5px}
 .td{width:5px;height:5px;border-radius:50%}
-.tmock-body{padding:14px;font-family:var(--fm);font-size:9px;line-height:1.9}
-.tl{margin-bottom:0}.g-t{color:var(--g)}.w-t{color:rgba(255,255,255,.65)}.gd-t{color:var(--gold)}.m-t{color:rgba(255,255,255,.45)}.r-t{color:#FF6B6B}.b-t{color:#5B9CF6}.ab-t{color:#7EC8F7}.pb-t{color:#FF9999}
+.tmock-body{padding:14px;font-family:var(--fm);font-size:11px;line-height:1.9}
+.tl{margin-bottom:0}.g-t{color:var(--g)}.w-t{color:rgba(255,255,255,.65)}.gd-t{color:var(--gold)}.m-t{color:rgba(255,255,255,.6)}.r-t{color:#FF6B6B}.b-t{color:#5B9CF6}.ab-t{color:#7EC8F7}.pb-t{color:#FF9999}
 .tcur{display:inline-block;width:5px;height:10px;background:var(--g);animation:blink 1s infinite;vertical-align:text-bottom;margin-left:1px}
-.ind-tbl{border-collapse:collapse;width:100%;font-family:var(--fm);font-size:9px}
+.ind-tbl{border-collapse:collapse;width:100%;font-family:var(--fm);font-size:11px}
 .ind-tbl th{color:rgba(255,255,255,.6);font-weight:400;text-align:left;padding:3px 10px 3px 0;border-bottom:1px solid rgba(255,255,255,.07);letter-spacing:.06em}
 .ind-tbl td{padding:3px 10px 3px 0;border-bottom:1px solid rgba(255,255,255,.04)}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 
-/* Discord mock */
-.dc-mock{width:100%;max-width:380px;background:#1e1f22;border-radius:8px;overflow:hidden;font-family:'DM Sans',sans-serif;box-shadow:0 8px 32px rgba(0,0,0,.5)}
-.dc-top{background:#2b2d31;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
-.dc-top-l{display:flex;align-items:center;gap:6px}
-.dc-hash{color:rgba(255,255,255,.3);font-size:18px;font-weight:700;line-height:1}
-.dc-ch{font-size:13px;font-weight:600;color:rgba(255,255,255,.85)}
-.dc-top-r{font-size:10px;color:rgba(255,255,255,.3);display:flex;align-items:center;gap:5px}
-.dc-dot{width:7px;height:7px;border-radius:50%;background:#3ba55d;display:inline-block}
-.dc-body{padding:12px 0 0}
-.dc-msg{display:flex;gap:10px;padding:6px 14px;transition:background .15s}
-.dc-msg:hover{background:rgba(255,255,255,.03)}
-.dc-av{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;margin-top:2px}
-.dc-msg-r{flex:1;min-width:0}
-.dc-name{font-size:12px;font-weight:600;color:rgba(255,255,255,.7);margin-bottom:2px;display:flex;align-items:center;gap:6px}
-.dc-badge{font-size:8px;background:#5865F2;color:#fff;padding:1px 5px;border-radius:3px;letter-spacing:.04em;font-weight:700}
-.dc-txt{font-size:12px;color:rgba(255,255,255,.6);line-height:1.5}
-.dc-react{display:flex;gap:6px;margin-top:4px}
-.dc-react span{font-size:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:2px 7px;border-radius:4px;color:rgba(255,255,255,.5)}
-.dc-input{margin:10px 10px 10px;background:#383a40;border-radius:6px;padding:8px 12px;display:flex;align-items:center;gap:4px}
-.dc-input-ph{font-size:12px;color:rgba(255,255,255,.2)}
-.dc-cur{display:inline-block;width:2px;height:13px;background:rgba(255,255,255,.4);animation:blink 1s infinite;vertical-align:middle}
 
 /* ── PRICING ─────────────────────────────────────────────── */
 .pricing-sec{background:var(--bg);position:relative;overflow:hidden}
@@ -357,10 +335,10 @@ ul{list-style:none}
 /* Toggle */
 .tog-w{display:flex;justify-content:center;margin-bottom:52px}
 .tog{position:relative;display:flex;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:100px;padding:4px}
-.tog-pill{position:absolute;top:4px;bottom:4px;border-radius:100px;background:var(--g);transition:left .35s cubic-bezier(.34,1.56,.64,1),width .35s cubic-bezier(.34,1.56,.64,1);box-shadow:0 0 24px rgba(0,255,135,.28)}
-.tog-btn{position:relative;z-index:2;font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:10px 28px;border:none;background:none;color:rgba(255,255,255,.33);border-radius:100px;cursor:pointer;transition:color .2s}
+.tog-pill{position:absolute;top:4px;bottom:4px;border-radius:100px;background:var(--g);transition:left .35s cubic-bezier(.22,1,.36,1),width .35s cubic-bezier(.22,1,.36,1)}
+.tog-btn{position:relative;z-index:2;min-height:44px;font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:10px 28px;border:none;background:none;color:rgba(255,255,255,.6);border-radius:100px;cursor:pointer;transition:color .2s}
 .tog-btn.on{color:#000;font-weight:700}
-.save-pill{font-family:var(--fm);font-size:8px;letter-spacing:.08em;text-transform:uppercase;background:rgba(0,255,135,.12);color:var(--g);border:1px solid rgba(0,255,135,.2);padding:4px 10px;border-radius:100px;white-space:nowrap;opacity:0;transition:opacity .3s;pointer-events:none;align-self:center;margin-left:12px}
+.save-pill{font-family:var(--fm);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:rgba(0,255,135,.12);color:var(--g);border:1px solid rgba(0,255,135,.2);padding:4px 10px;border-radius:100px;white-space:nowrap;opacity:0;transition:opacity .3s;pointer-events:none;align-self:center;margin-left:12px}
 .save-pill.show{opacity:1}
 
 /* Price cards */
@@ -370,29 +348,29 @@ ul{list-style:none}
 .pc.pop{background:var(--card2);box-shadow:inset 0 1px 0 rgba(0,255,135,.09)}
 .pc:hover{background:var(--card2)}
 .pc.pop:hover{background:#14142A}
-.pc-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;background:var(--g);color:#000;padding:4px 16px;font-weight:700;white-space:nowrap}
+.pc-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--g);color:#000;padding:4px 16px;font-weight:700;white-space:nowrap}
 .pc-name{font-family:var(--fd);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:8px}
-.pc-desc{font-size:13px;color:rgba(255,255,255,.60);line-height:1.8;margin-bottom:20px;min-height:46px}
+.pc-desc{font-size:15px;color:rgba(255,255,255,.60);line-height:1.8;margin-bottom:20px;min-height:46px}
 .pc-amount{display:flex;align-items:baseline;gap:1px;margin-bottom:5px}
-.pc-dlr{font-family:var(--fd);font-size:22px;font-weight:700;color:rgba(255,255,255,.45)}
+.pc-dlr{font-family:var(--fd);font-size:22px;font-weight:700;color:rgba(255,255,255,.6)}
 .pc-num{font-family:var(--fd);font-size:54px;font-weight:800;line-height:.95}
-.pc-per{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.22);margin-left:4px;align-self:flex-end;margin-bottom:5px}
+.pc-per{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.6);margin-left:4px;align-self:flex-end;margin-bottom:5px}
 .pc-save{font-family:var(--fm);font-size:11px;color:rgba(0,255,135,0.85);letter-spacing:.06em;min-height:16px;margin-bottom:18px}
-.pc-btn{width:100%;padding:15px;border:none;font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;margin-bottom:20px;transition:all .2s;display:block;text-align:center;font-weight:700}
-.pcb-p{background:var(--g);color:#000;box-shadow:0 4px 18px rgba(0,255,135,.2)}
-.pcb-p:hover{background:var(--g2);box-shadow:0 6px 28px rgba(0,255,135,.3);transform:translateY(-1px)}
+.pc-btn{width:100%;padding:15px;border:none;font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;margin-bottom:20px;transition:all .2s;display:block;text-align:center;font-weight:700}
+.pcb-p{background:var(--g);color:#000;box-shadow:0 4px 18px rgba(0,0,0,.4)}
+.pcb-p:hover{background:var(--g2);box-shadow:0 6px 28px rgba(0,0,0,.45);transform:translateY(-1px)}
 .pcb-o{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.1)}
 .pcb-o:hover{border-color:rgba(0,255,135,.25);transform:translateY(-1px)}
 .pcb-g{background:var(--gold);color:#000}
 .pcb-g:hover{background:var(--gold2);transform:translateY(-1px)}
 .pc-rule{height:1px;background:rgba(255,255,255,.05);margin-bottom:16px}
-.pc-incl{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:11px}
+.pc-incl{font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:11px}
 .pc-feats{display:flex;flex-direction:column}
-.pc-feats li{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.72);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:9px}
+.pc-feats li{font-family:var(--fm);font-size:13px;color:rgba(255,255,255,.72);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:9px}
 .pc-feats li:last-child{border-bottom:none}
 .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;background:rgba(255,255,255,.12)}
-.dot.g{background:var(--g);box-shadow:0 0 6px rgba(0,255,135,.3)}
-.pr-note{text-align:center;margin-top:28px;font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.52);letter-spacing:.04em}
+.dot.g{background:var(--g)}
+.pr-note{text-align:center;margin-top:28px;font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.6);letter-spacing:.04em}
 
 /* ── EDGE / EVERVAULT ─────────────────────────────────────── */
 .edge-sec{background:var(--bg3);border-bottom:1px solid var(--b)}
@@ -400,46 +378,19 @@ ul{list-style:none}
 .ind-stack{display:flex;flex-direction:column;gap:8px}
 .ind-card{display:flex;align-items:center;gap:18px;background:var(--card);border:1px solid rgba(255,255,255,.07);border-left:1px solid rgba(0,255,135,.18);padding:14px 18px;transition:border-color .2s,border-left-color .2s,background .2s,box-shadow .2s;position:relative;overflow:hidden}
 .ind-card::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,255,135,.03) 0%,transparent 60%);opacity:0;transition:opacity .2s}
-.ind-card:hover{border-color:rgba(255,255,255,.1);border-left-color:var(--g);background:rgba(13,13,26,.9);box-shadow:0 0 20px rgba(0,255,135,.06),inset 0 0 20px rgba(0,255,135,.03)}
+.ind-card:hover{border-color:rgba(255,255,255,.1);border-left-color:var(--g);background:rgba(13,13,26,.9)}
 .ind-card:hover::before{opacity:1}
-.ind-num{font-family:var(--fm);font-size:8px;color:var(--g);letter-spacing:.12em;min-width:22px;flex-shrink:0;opacity:.5;transition:opacity .2s}
+.ind-num{font-family:var(--fm);font-size:11px;color:var(--g);letter-spacing:.12em;min-width:22px;flex-shrink:0;opacity:.75;transition:opacity .2s}
 .ind-card:hover .ind-num{opacity:1}
 .ind-info{display:flex;flex-direction:column;gap:4px}
 .ind-name{font-family:var(--fd);font-size:14px;font-weight:700;color:var(--text);letter-spacing:.02em;transition:color .2s}
 .ind-card:hover .ind-name{color:#fff}
-.ind-desc{font-family:var(--fb);font-size:11px;color:rgba(255,255,255,.32);line-height:1.4;transition:color .2s}
-.ind-card:hover .ind-desc{color:rgba(255,255,255,.52)}
+.ind-desc{font-family:var(--fb);font-size:13px;color:rgba(255,255,255,.6);line-height:1.4;transition:color .2s}
+.ind-card:hover .ind-desc{color:rgba(255,255,255,.6)}
 .edge-specs{border:1px solid var(--b);margin-bottom:34px}
-.spec-r{display:flex;justify-content:space-between;padding:13px 16px;border-bottom:1px solid var(--b);font-family:var(--fm);font-size:10px}
+.spec-r{display:flex;justify-content:space-between;padding:13px 16px;border-bottom:1px solid var(--b);font-family:var(--fm);font-size:11px}
 .spec-r:last-child{border-bottom:none}
-.spec-k{color:rgba(255,255,255,.52)}.spec-v{color:var(--text)}.spec-v.g{color:var(--g)}
-
-/* ── TESTIMONIALS ─────────────────────────────────────────── */
-.testi-sec{background:var(--bg2);border-top:1px solid var(--b)}
-.testi-h{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:52px;flex-wrap:wrap}
-.testi-h .sh{font-size:clamp(30px,4.5vw,52px)}
-.tcols{display:flex;gap:14px;max-height:640px;overflow:hidden;mask-image:linear-gradient(to bottom,transparent,black 10%,black 90%,transparent);-webkit-mask-image:linear-gradient(to bottom,transparent,black 10%,black 90%,transparent)}
-.col{display:flex;flex-direction:column;gap:10px;flex:1;min-width:0}
-.col:nth-child(2),.col:nth-child(3){display:none}
-.col-t{display:flex;flex-direction:column;gap:10px;animation:scUp 24s linear infinite}
-.col:nth-child(2) .col-t{animation-duration:30s;animation-direction:reverse}
-.col:nth-child(3) .col-t{animation-duration:20s}
-@keyframes scUp{from{transform:translateY(0)}to{transform:translateY(-50%)}}
-/* Discord-style cards */
-.tcard{background:#1e1f22;border:1px solid rgba(255,255,255,.06);padding:14px 16px;transition:background .2s;border-radius:2px}
-.tcard:hover{background:#232428}
-.dc-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.dc-av{width:38px;height:38px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#2b2d31}
-.dc-av img{width:100%;height:100%;display:block;object-fit:cover}
-.dc-av.no-pic{display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:16px;font-weight:700;color:rgba(255,255,255,.35);background:#313338}
-.dc-meta{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
-.dc-name{font-family:var(--fm);font-size:10px;font-weight:700;color:#fff}
-.dc-role{font-family:var(--fm);font-size:8px;letter-spacing:.06em;padding:2px 7px;border-radius:3px;background:rgba(0,255,135,.15);color:var(--g);border:1px solid rgba(0,255,135,.2)}
-.dc-role.gold{background:rgba(255,179,0,.12);color:var(--gold);border-color:rgba(255,179,0,.2)}
-.dc-time{font-family:var(--fm);font-size:8px;color:rgba(255,255,255,.22);margin-left:2px}
-.dc-msg{font-size:13px;color:rgba(255,255,255,.7);line-height:1.75;padding-left:46px;margin-bottom:10px}
-.dc-reacts{display:flex;gap:6px;padding-left:46px;flex-wrap:wrap}
-.dc-r{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:3px 8px;font-size:11px;color:rgba(255,255,255,.45);font-family:var(--fm);font-size:9px}
+.spec-k{color:rgba(255,255,255,.6)}.spec-v{color:var(--text)}.spec-v.g{color:var(--g)}
 
 /* ── WORLD MAP ────────────────────────────────────────────── */
 .map-sec{background:var(--bg);overflow:hidden}
@@ -450,7 +401,7 @@ ul{list-style:none}
 .ms{padding:8px 24px;border-right:1px solid var(--b);text-align:center}
 .ms:last-child{border-right:none}
 .ms-v{font-family:var(--fd);font-size:13px;font-weight:700;color:var(--g);line-height:1;margin-bottom:4px}
-.ms-l{font-family:var(--fm);font-size:6px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.ms-l{font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 
 /* ── FAQ ─────────────────────────────────────────────────── */
 .faq-sec{background:var(--bg2);border-top:1px solid var(--b)}
@@ -463,36 +414,36 @@ ul{list-style:none}
 .faq-qt{font-family:var(--fd);font-size:14px;font-weight:600;color:var(--text);text-align:left;letter-spacing:-.01em}
 .faq-ic{flex-shrink:0;width:18px;height:18px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:transform .3s,border-color .25s;font-size:13px;color:var(--g);font-family:var(--fm)}
 .faq-item.open .faq-ic{transform:rotate(45deg);border-color:rgba(0,255,135,.3)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(.22,1,.36,1);font-size:13px;color:rgba(255,255,255,.62);line-height:1.82;padding:0 22px}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(.22,1,.36,1);font-size:15px;color:rgba(255,255,255,.62);line-height:1.82;padding:0 22px}
 .faq-item.open .faq-a{max-height:300px;padding-bottom:20px}
 
 /* ── AFFILIATE ───────────────────────────────────────────── */
 .aff-sec{background:var(--bg2);border-top:1px solid rgba(0,255,135,.1);border-bottom:1px solid rgba(0,255,135,.1);position:relative;overflow:hidden}
 .aff-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,255,135,.06) 0%,transparent 70%);pointer-events:none}
 .aff-in{max-width:900px;margin:0 auto;padding:80px 40px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;position:relative;z-index:1}
-.aff-badge{font-family:var(--fm);font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:var(--g);border:1px solid rgba(0,255,135,.25);padding:5px 14px;background:rgba(0,255,135,.06);display:inline-block}
-.aff-pct{font-family:var(--fd);font-size:clamp(72px,10vw,120px);font-weight:800;line-height:.9;color:var(--g);letter-spacing:-.03em;text-shadow:0 0 60px rgba(0,255,135,.35),0 0 120px rgba(0,255,135,.15)}
+.aff-badge{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--g);border:1px solid rgba(0,255,135,.25);padding:5px 14px;background:rgba(0,255,135,.06);display:inline-block}
+.aff-pct{font-family:var(--fd);font-size:clamp(72px,10vw,120px);font-weight:800;line-height:.9;color:var(--g);letter-spacing:-.03em}
 .aff-title{font-family:var(--fd);font-size:clamp(22px,3.5vw,40px);font-weight:700;text-transform:uppercase;line-height:1;letter-spacing:-.01em}
-.aff-desc{font-size:14px;color:rgba(255,255,255,.55);line-height:1.75;max-width:560px}
-.aff-note{font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:rgba(0,255,135,.35);text-transform:uppercase;margin-top:6px}
+.aff-desc{font-size:14px;color:rgba(255,255,255,.6);line-height:1.75;max-width:560px}
+.aff-note{font-family:var(--fm);font-size:11px;letter-spacing:.08em;color:rgba(0,255,135,.75);text-transform:uppercase;margin-top:6px}
 @media(max-width:640px){.aff-in{padding:60px 24px}}
 
 /* ── FOOTER ──────────────────────────────────────────────── */
 .footer{background:var(--bg3);border-top:1px solid var(--b);padding:68px 60px 0}
 .footer-in{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:52px;max-width:1280px;margin:0 auto;padding-bottom:60px}
 .flogo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.06em;display:block;margin-bottom:14px}
-.flogo .g{color:var(--g);text-shadow:0 0 16px rgba(0,255,135,.4)}
-.flogo .s{font-family:var(--fm);font-size:9px;font-weight:400;color:var(--muted);letter-spacing:.09em;margin-left:6px;text-transform:uppercase}
-.ftag{font-size:13px;color:rgba(255,255,255,.55);line-height:1.82;max-width:255px}
-.femail{font-family:var(--fm);font-size:9px;color:rgba(0,255,135,.45);letter-spacing:.04em;display:block;margin-top:12px;transition:color .2s}
+.flogo .g{color:var(--g)}
+.flogo .s{font-family:var(--fm);font-size:11px;font-weight:400;color:var(--muted);letter-spacing:.09em;margin-left:6px;text-transform:uppercase}
+.ftag{font-size:15px;color:rgba(255,255,255,.6);line-height:1.82;max-width:255px}
+.femail{font-family:var(--fm);font-size:11px;color:rgba(0,255,135,.75);letter-spacing:.04em;display:block;margin-top:12px;transition:color .2s}
 .femail:hover{color:var(--g)}
-.fc h4{font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.04);margin-bottom:16px}
+.fc h3{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.04);margin-bottom:16px}
 .fc li{margin-bottom:10px}
-.fc a{font-size:13px;color:rgba(255,255,255,.55);transition:color .2s}
+.fc a{font-size:15px;color:rgba(255,255,255,.6);transition:color .2s}
 .fc a:hover{color:var(--g)}
 .footer-bot{border-top:1px solid rgba(255,255,255,.04);padding:20px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;max-width:1280px;margin:0 auto}
-.fcopy{font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:.04em}
-.fdisc{font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.38);max-width:500px;line-height:1.7;text-align:right}
+.fcopy{font-family:var(--fm);font-size:11px;color:var(--muted);letter-spacing:.04em}
+.fdisc{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.6);max-width:500px;line-height:1.7;text-align:right}
 
 /* ── INDICATOR SHOWCASE ─────────────────────────────────── */
 .indshow-sec{background:var(--bg);border-top:1px solid var(--b);border-bottom:1px solid var(--b);position:relative;overflow:hidden}
@@ -502,14 +453,13 @@ ul{list-style:none}
 .isc-slides{display:flex;transition:transform .52s cubic-bezier(.22,1,.36,1)}
 .isc-slide{min-width:100%;display:grid;grid-template-columns:1fr 1.15fr;gap:72px;align-items:center}
 .isc-l{background:rgba(4,4,10,.35);padding:36px 32px;border-radius:6px;backdrop-filter:blur(4px)}
-.isc-num{font-family:var(--fm);font-size:9px;letter-spacing:.2em;color:rgba(0,255,135,.4);margin-bottom:14px}
 .isc-name{font-family:var(--fd);font-size:clamp(26px,3.2vw,44px);font-weight:700;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;margin-bottom:16px}
 .isc-name .g{color:var(--g)}
-.isc-desc{font-size:13px;color:#fff;line-height:1.82;margin-bottom:20px;text-shadow:0 1px 8px rgba(0,0,0,.9),0 0 20px rgba(0,0,0,.8)}
+.isc-desc{font-size:15px;color:#fff;line-height:1.82;margin-bottom:20px;text-shadow:0 1px 8px rgba(0,0,0,.9),0 0 20px rgba(0,0,0,.8)}
 .isc-feats{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
-.isc-feats li{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.92);display:flex;align-items:flex-start;gap:9px;text-shadow:0 1px 6px rgba(0,0,0,.9)}
-.isc-feats li::before{content:'→';color:var(--g);font-size:9px;flex-shrink:0;margin-top:1px}
-.isc-access{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#000;background:var(--g);padding:4px 12px;display:inline-block}
+.isc-feats li{font-family:var(--fm);font-size:13px;color:rgba(255,255,255,.92);display:flex;align-items:flex-start;gap:9px;text-shadow:0 1px 6px rgba(0,0,0,.9)}
+.isc-feats li::before{content:'→';color:var(--g);font-size:11px;flex-shrink:0;margin-top:1px}
+.isc-access{font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#000;background:var(--g);padding:4px 12px;display:inline-block}
 /* Laptop mockup */
 /* ── MONITOR MOCKUP ────────────────────────────────────── */
 .laptop-wrap{position:relative;width:100%;display:flex;flex-direction:column;align-items:center;filter:drop-shadow(0 32px 64px rgba(0,0,0,.8))}
@@ -564,11 +514,11 @@ ul{list-style:none}
 .phone-home{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:30px;height:3px;border-radius:2px;background:rgba(255,255,255,.35);z-index:2}
 /* Nav */
 .isc-nav{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:44px}
-.isc-arrow{background:none;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:15px;width:44px;height:44px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;font-family:var(--fm);flex-shrink:0}
+.isc-arrow{background:none;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.6);font-size:15px;width:44px;height:44px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;font-family:var(--fm);flex-shrink:0}
 .isc-arrow:hover{border-color:rgba(0,255,135,.4);color:var(--g)}
 .isc-dots{display:flex;gap:8px;align-items:center}
-.isc-dot{width:24px;height:2px;background:rgba(255,255,255,.15);cursor:pointer;transition:all .28s;border:none;padding:0;display:block}
-.isc-dot.on{background:var(--g);width:36px}
+.isc-dot{width:24px;height:2px;padding:21px 0;box-sizing:content-box;background-color:rgba(255,255,255,.15);background-clip:content-box;cursor:pointer;transition:all .28s;border:none;display:block}
+.isc-dot.on{background-color:var(--g);width:36px}
 @media(max-width:1060px){
   .isc-slide{grid-template-columns:1fr;gap:32px}
   .laptop-wrap{max-width:100%;margin-left:0}
@@ -580,8 +530,6 @@ ul{list-style:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.34s}
 
 /* ── RESPONSIVE ─────────────────────────────────────────── */
-@media(min-width:900px){.col:nth-child(2){display:flex}}
-@media(min-width:1200px){.col:nth-child(3){display:flex}}
 @media(max-width:1060px){
   .nav,.nav.s{padding-left:28px;padding-right:28px}
   .nl{display:none;position:fixed;inset:0;background:rgba(4,4,10,.97);flex-direction:column;align-items:center;justify-content:center;gap:40px;z-index:100}
@@ -596,7 +544,6 @@ ul{list-style:none}
   .bot-banner{grid-template-columns:1fr;padding:40px 32px;gap:32px}
   .bot-banner::after{display:none}
   .footer-in{grid-template-columns:1fr 1fr}
-  .testi-h{flex-direction:column;align-items:flex-start}
   .edge-in{grid-template-columns:1fr}
   .fp{grid-template-columns:1fr}
   .fp-r{display:none}
@@ -609,7 +556,6 @@ ul{list-style:none}
   .save-pill{display:none}
   .logos-grid{grid-template-columns:repeat(2,1fr)}
   #worldMapWrap{height:320px}
-  .gc img, .pc img{height:auto}
   .gc div[style*="display:flex"] img[src*="logo"]{width:26px;height:26px}
   .gc h3{font-size:15px}
 }
@@ -711,9 +657,9 @@ ul{list-style:none}
 
     <div class="pgrid rv d1" id="glowGrid">
       <div class="gc">
-        <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;margin-bottom:18px"><img src="images/course-hero.png" alt="$moove Market Mastery Premium Course" style="width:100%;height:100%;object-fit:cover;display:block"/></div>
+        <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;margin-bottom:18px"><img src="images/course-hero.webp" width="800" height="450" loading="lazy" alt="$moove Market Mastery Premium Course" style="width:100%;height:100%;object-fit:cover;display:block"/></div>
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <img src="images/logo.png" alt="$moove logo" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;display:block"/>
+          <img src="images/logo.webp" width="128" height="128" loading="lazy" alt="$moove logo" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;display:block"/>
           <h3 style="margin:0"><span class="g">Trading</span> Course</h3>
         </div>
         <p>6 chapters. 18 lessons. Built for traders past the basics — NQ &amp; ES focused, with principles that apply across any market.</p>
@@ -728,9 +674,9 @@ ul{list-style:none}
       </div>
       <div class="gc feat">
         <span class="gc-badge">Most Popular</span>
-        <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;margin-bottom:18px"><img src="images/community-hero.png" alt="$moove Community" style="width:100%;height:100%;object-fit:cover;display:block"/></div>
+        <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;margin-bottom:18px"><img src="images/community-hero.webp" width="800" height="450" loading="lazy" alt="$moove Community" style="width:100%;height:100%;object-fit:cover;display:block"/></div>
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <img src="images/logo.png" alt="$moove logo" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;display:block"/>
+          <img src="images/logo.webp" width="128" height="128" loading="lazy" alt="$moove logo" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;display:block"/>
           <h3 style="margin:0">Active <span class="g">Community</span></h3>
         </div>
         <p>Chart breakdowns, trade ideas, shared trade reviews, and a network of serious traders — NQ &amp; ES focused, trading across Futures, FX &amp; Metals.</p>
@@ -742,9 +688,9 @@ ul{list-style:none}
         </ul>
       </div>
       <div class="gc">
-        <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;margin-bottom:18px"><img src="images/indicators-hero.png" alt="$moove TradingView Indicators" style="width:100%;height:100%;object-fit:cover;display:block"/></div>
+        <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;margin-bottom:18px"><img src="images/indicators-hero.webp" width="800" height="450" loading="lazy" alt="$moove TradingView Indicators" style="width:100%;height:100%;object-fit:cover;display:block"/></div>
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <img src="images/logo.png" alt="$moove logo" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;display:block"/>
+          <img src="images/logo.webp" width="128" height="128" loading="lazy" alt="$moove logo" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;display:block"/>
           <h3 style="margin:0"><span class="g">TradingView</span> Indicators</h3>
         </div>
         <p>5 proprietary tools built around NQ &amp; ES futures using AMDX/QT methodology — versatile enough to apply across any market. Cut the noise, see what institutional players see.</p>
@@ -760,7 +706,7 @@ ul{list-style:none}
 
     <div class="bot-banner rv d2" id="bot">
       <div style="position:relative;z-index:1">
-        <img src="images/bot-hero.png" alt="$moove EA Trading Bot" style="width:100%;border-radius:8px;display:block"/>
+        <img src="images/bot-hero.webp" width="800" height="1000" loading="lazy" alt="$moove EA Trading Bot" style="width:100%;border-radius:8px;display:block"/>
       </div>
       <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:0">
         <div class="bb-badge">Application Only &mdash; Exclusive Access</div>
@@ -803,7 +749,6 @@ ul{list-style:none}
           <!-- Slide 1: Indicators -->
           <div class="isc-slide">
             <div class="isc-l">
-              <div class="isc-num">01 / 03</div>
               <h3 class="isc-name">5 Proprietary<br><span class="g">Indicators</span></h3>
               <p class="isc-desc">All 5 Smoove indicators running live on TradingView — built on NQ &amp; ES, applicable across Futures, FX &amp; Metals. No repainting. No lag. No guesswork.</p>
               <ul class="isc-feats">
@@ -820,14 +765,14 @@ ul{list-style:none}
                 <div class="phone-mock">
                   <div class="phone-screen-w">
                     <div class="phone-island"></div>
-                    <img src="images/slide-indicators.png" class="phone-img" loading="lazy" alt=""/>
+                    <img src="images/slide-indicators.webp" width="640" height="1386" class="phone-img" loading="lazy" alt=""/>
                     <div class="phone-home"></div>
                   </div>
                 </div>
                 <div class="laptop-wrap">
                   <div class="laptop-screen">
                     <div class="laptop-screen-inner">
-                      <img src="images/slide-indicators-desktop.png" alt="$moove indicators on TradingView" class="laptop-img" loading="lazy"/>
+                      <img src="images/slide-indicators-desktop.webp" width="1400" height="636" alt="$moove indicators on TradingView" class="laptop-img" loading="lazy"/>
                     </div>
                   </div>
                   <div class="laptop-base"></div>
@@ -843,7 +788,6 @@ ul{list-style:none}
           <!-- Slide 2: Course -->
           <div class="isc-slide">
             <div class="isc-l">
-              <div class="isc-num">02 / 03</div>
               <h3 class="isc-name">The $moove<br><span class="g">Course</span></h3>
               <p class="isc-desc">A structured curriculum built on NQ &amp; ES futures — with principles that translate across any market. From structure foundations to live execution, every module builds a real trading framework.</p>
               <ul class="isc-feats">
@@ -860,14 +804,14 @@ ul{list-style:none}
                 <div class="phone-mock">
                   <div class="phone-screen-w">
                     <div class="phone-island"></div>
-                    <img src="images/slide-course-mobile.png" class="phone-img" loading="lazy" alt=""/>
+                    <img src="images/slide-course-mobile.webp" width="640" height="1386" class="phone-img" loading="lazy" alt=""/>
                     <div class="phone-home"></div>
                   </div>
                 </div>
                 <div class="laptop-wrap">
                   <div class="laptop-screen">
                     <div class="laptop-screen-inner">
-                      <img src="images/slide-course.png" alt="$moove course structure on Whop" class="laptop-img" loading="lazy"/>
+                      <img src="images/slide-course.webp" width="1400" height="706" alt="$moove course structure on Whop" class="laptop-img" loading="lazy"/>
                     </div>
                   </div>
                   <div class="laptop-base"></div>
@@ -883,7 +827,6 @@ ul{list-style:none}
           <!-- Slide 3: Community -->
           <div class="isc-slide">
             <div class="isc-l">
-              <div class="isc-num">03 / 03</div>
               <h3 class="isc-name">The<br><span class="g">Community</span></h3>
               <p class="isc-desc">An active Discord built for serious traders. Real-time trade ideas, daily bias breakdowns, live session coverage, and direct access to mentors who are trading the same setups you're learning.</p>
               <ul class="isc-feats">
@@ -900,14 +843,14 @@ ul{list-style:none}
                 <div class="phone-mock">
                   <div class="phone-screen-w">
                     <div class="phone-island"></div>
-                    <img src="images/slide-community-mobile.png" class="phone-img" loading="lazy" alt=""/>
+                    <img src="images/slide-community-mobile.webp" width="640" height="1386" class="phone-img" loading="lazy" alt=""/>
                     <div class="phone-home"></div>
                   </div>
                 </div>
                 <div class="laptop-wrap">
                   <div class="laptop-screen">
                     <div class="laptop-screen-inner">
-                      <img src="images/slide-community.png" alt="$moove community Discord" class="laptop-img" loading="lazy"/>
+                      <img src="images/slide-community.webp" width="1400" height="698" alt="$moove community Discord" class="laptop-img" loading="lazy"/>
                     </div>
                   </div>
                   <div class="laptop-base"></div>
@@ -959,22 +902,22 @@ ul{list-style:none}
     <div class="tog-w rv d2">
       <div class="tog" id="togWrap">
         <div class="tog-pill" id="togPill"></div>
-        <button class="tog-btn on" id="btnMo" onclick="setTog('mo')">Monthly</button>
-        <button class="tog-btn" id="btnYr" onclick="setTog('yr')">Annual</button>
+        <button class="tog-btn on" id="btnMo" aria-pressed="true" onclick="setTog('mo')">Monthly</button>
+        <button class="tog-btn" id="btnYr" aria-pressed="false" onclick="setTog('yr')">Annual</button>
       </div>
       <div class="save-pill" id="savePill">Save up to $767/yr</div>
     </div>
 
     <div class="pcards" id="priceGrid">
       <div class="pc" id="card1" data-save="Save $401/yr">
-        <img src="images/indicators-hero.png" alt="$moove Indicators" style="width:100%;border-radius:6px;margin-bottom:18px;display:block"/>
+        <img src="images/indicators-hero.webp" width="800" height="450" loading="lazy" alt="$moove Indicators" style="width:100%;border-radius:6px;margin-bottom:18px;display:block"/>
         <h3 class="pc-name">Indicators</h3>
         <p class="pc-desc">All $moove TradingView indicators — built on NQ &amp; ES, works across Futures, FX &amp; Metals. Cancel anytime.</p>
         <div class="pc-amount"><span class="pc-dlr">$</span><span class="pc-num" id="p1v">124.99</span><span class="pc-per" id="p1per">/mo USD</span></div>
         <div class="pc-save" id="p1save"></div>
         <div style="display:flex;align-items:center;gap:7px;margin-bottom:12px;padding:8px 12px;background:rgba(0,255,135,.04);border:1px solid rgba(0,255,135,.12);border-radius:3px">
-          <span style="width:5px;height:5px;border-radius:50%;background:var(--g);flex-shrink:0;box-shadow:0 0 6px rgba(0,255,135,.6)"></span>
-          <span style="font-family:var(--fm);font-size:8px;color:rgba(0,255,135,.7);letter-spacing:.08em;text-transform:uppercase">TradingView username required at checkout</span>
+          <span style="width:5px;height:5px;border-radius:50%;background:var(--g);flex-shrink:0"></span>
+          <span style="font-family:var(--fm);font-size:11px;color:rgba(0,255,135,.75);letter-spacing:.08em;text-transform:uppercase">TradingView username required at checkout</span>
         </div>
         <button class="pc-btn pcb-p" id="btn1" onclick="window.open('https://whop.com/checkout/plan_3TJTY9x6shzpz','_blank')">Get Indicators</button>
         <div class="pc-rule"></div>
@@ -994,14 +937,14 @@ ul{list-style:none}
 
       <div class="pc pop" id="card2" data-save="Save $767/yr">
         <div class="pc-badge">Most Popular</div>
-        <img src="images/course-hero.png" alt="$moove Full Program" style="width:100%;border-radius:6px;margin-bottom:18px;display:block"/>
+        <img src="images/course-hero.webp" width="800" height="450" loading="lazy" alt="$moove Full Program" style="width:100%;border-radius:6px;margin-bottom:18px;display:block"/>
         <h3 class="pc-name">Full Program</h3>
         <p class="pc-desc">All 5 indicators + 6-chapter course (18 lessons) + active community. The complete $moove system.</p>
         <div class="pc-amount"><span class="pc-dlr">$</span><span class="pc-num" id="p2v">247.00</span><span class="pc-per">/mo USD</span></div>
         <div class="pc-save" id="p2save"></div>
         <div style="display:flex;align-items:center;gap:7px;margin-bottom:12px;padding:8px 12px;background:rgba(0,255,135,.04);border:1px solid rgba(0,255,135,.12);border-radius:3px">
-          <span style="width:5px;height:5px;border-radius:50%;background:var(--g);flex-shrink:0;box-shadow:0 0 6px rgba(0,255,135,.6)"></span>
-          <span style="font-family:var(--fm);font-size:8px;color:rgba(0,255,135,.7);letter-spacing:.08em;text-transform:uppercase">TradingView username required at checkout</span>
+          <span style="width:5px;height:5px;border-radius:50%;background:var(--g);flex-shrink:0"></span>
+          <span style="font-family:var(--fm);font-size:11px;color:rgba(0,255,135,.75);letter-spacing:.08em;text-transform:uppercase">TradingView username required at checkout</span>
         </div>
         <button class="pc-btn pcb-p" id="btn2" onclick="window.open('https://whop.com/checkout/plan_G1kXYvouTIfLT','_blank')">Join Full Program</button>
         <div class="pc-rule"></div>
@@ -1019,11 +962,11 @@ ul{list-style:none}
       </div>
 
       <div class="pc">
-        <img src="images/bot-hero.png" alt="$moove EA Bot" style="width:100%;border-radius:6px;margin-bottom:18px;display:block"/>
+        <img src="images/bot-hero.webp" width="800" height="1000" loading="lazy" alt="$moove EA Bot" style="width:100%;border-radius:6px;margin-bottom:18px;display:block"/>
         <h3 class="pc-name">EA Bot Access</h3>
         <p class="pc-desc">Active members only — must hold an Indicators or Full Program membership before applying.</p>
         <div class="pc-save"></div>
-        <button class="pc-btn pcb-g" onclick="window.scrollTo({top:0,behavior:'smooth'})">Become a Member First</button>
+        <button class="pc-btn pcb-g" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Become a Member First</button>
         <div class="pc-rule"></div>
         <div class="pc-incl">Requirements</div>
         <ul class="pc-feats">
@@ -1047,7 +990,7 @@ ul{list-style:none}
 <section class="aff-sec" id="affiliate">
   <div class="aff-in">
     <div class="aff-badge">Members Only Program</div>
-    <img src="images/affiliate-hero.png" alt="$moove Affiliate Program" style="width:100%;max-width:960px;border-radius:10px;border:1px solid rgba(0,255,135,.12);box-shadow:0 0 60px rgba(0,255,135,.08)"/>
+    <img src="images/affiliate-hero.webp" width="1280" height="854" loading="lazy" alt="$moove Affiliate Program" style="width:100%;max-width:960px;border-radius:10px;border:1px solid rgba(0,255,135,.12)"/>
     <a href="#pricing" class="btn-gd" style="margin-top:8px">Become a Member to Unlock</a>
     <p class="aff-note">// Active Indicators or Full Program membership required to access affiliate link</p>
   </div>
@@ -1086,29 +1029,8 @@ ul{list-style:none}
   </div>
 </section>
 
-<!-- ═══ TESTIMONIALS ════════════════════════════════════════ -->
-<section class="sec testi-sec" id="community">
-  <div class="si">
-    <div class="testi-h rv">
-      <div>
-        <div class="ey">Community</div>
-        <h2 class="sh" style="font-size:clamp(30px,4.5vw,52px)">
-          <span style="color:var(--text)">What Members</span><br>
-          <span class="g">Are Saying.</span>
-        </h2>
-      </div>
-      <p class="ss" style="max-width:320px">Real traders. Real results. The community is active every session. Discord access is granted automatically after purchase.</p>
-    </div>
-    <div class="tcols">
-      <div class="col"><div class="col-t" id="col1"></div></div>
-      <div class="col"><div class="col-t" id="col2"></div></div>
-      <div class="col"><div class="col-t" id="col3"></div></div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ WORLD MAP ════════════════════════════════════════════ -->
-<section class="sec map-sec" id="global">
+<section class="sec map-sec" id="community">
   <div class="si">
     <div class="map-h rv">
       <div class="ey">Global Community</div>
@@ -1192,7 +1114,7 @@ ul{list-style:none}
       <a id="footer-email" href="#" class="femail"></a>
     </div>
     <div class="fc">
-      <h4>Program</h4>
+      <h3>Program</h3>
       <ul>
         <li><a href="#pillars">Trading Course</a></li>
         <li><a href="#pillars">Community</a></li>
@@ -1202,7 +1124,7 @@ ul{list-style:none}
       </ul>
     </div>
     <div class="fc">
-      <h4>Pricing</h4>
+      <h3>Pricing</h3>
       <ul>
         <li><a href="#pricing">Indicators &mdash; $124.99/mo</a></li>
         <li><a href="#pricing">Indicators &mdash; $1,099/yr</a></li>
@@ -1210,7 +1132,7 @@ ul{list-style:none}
       </ul>
     </div>
     <div class="fc">
-      <h4>Legal</h4>
+      <h3>Legal</h3>
       <ul>
         <li><a href="terms.html">Terms of Service</a></li>
         <li><a href="privacy.html">Privacy Policy</a></li>
@@ -1236,6 +1158,11 @@ window.addEventListener('scroll',()=>document.getElementById('nav').classList.to
 const ham=document.getElementById('ham'),nl=document.getElementById('nl');
 ham.addEventListener('click',()=>{ham.classList.toggle('o');nl.classList.toggle('open');ham.setAttribute('aria-expanded',nl.classList.contains('open'))});
 function closeNav(){ham.classList.remove('o');nl.classList.remove('open');ham.setAttribute('aria-expanded','false')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nl.classList.contains('open')){closeNav();ham.focus()}});
+
+/* Animations run only while on screen, and never for reduced-motion visitors. */
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function runWhileVisible(el,fn,ms){if(RM)return;let id=0;new IntersectionObserver(([e])=>{if(e.isIntersecting){if(!id)id=setInterval(fn,ms)}else{clearInterval(id);id=0}}).observe(el)}
 
 /* ── HERO CANVAS — MATRIX RAIN ──────────────────────────── */
 (function(){
@@ -1271,7 +1198,7 @@ function closeNav(){ham.classList.remove('o');nl.classList.remove('open');ham.se
       drops[i]+=SPEED;
     }
   }
-  setInterval(draw,33);
+  runWhileVisible(canvas,draw,33);
   requestAnimationFrame(()=>canvas.classList.add('on'));
 })();
 
@@ -1323,7 +1250,7 @@ function setTog(mode){
   const sp=document.getElementById('savePill');
   const b1=document.getElementById('btn1'),b2=document.getElementById('btn2');
   if(isYr){
-    btnYr.classList.add('on');btnMo.classList.remove('on');
+    btnYr.classList.add('on');btnMo.classList.remove('on');btnYr.setAttribute('aria-pressed','true');btnMo.setAttribute('aria-pressed','false');
     pill.style.left=btnYr.offsetLeft+'px';pill.style.width=btnYr.offsetWidth+'px';
     animNum(document.getElementById('p1v'),124.99,92);
     animNum(document.getElementById('p2v'),247,183,2);
@@ -1334,7 +1261,7 @@ function setTog(mode){
     if(b1) b1.onclick=()=>window.open('https://whop.com/checkout/plan_vOR8D7lM6G5B9','_blank');
     if(b2) b2.onclick=()=>window.open('https://whop.com/checkout/plan_2drTjYQjrZoQf','_blank');
   } else {
-    btnMo.classList.add('on');btnYr.classList.remove('on');
+    btnMo.classList.add('on');btnYr.classList.remove('on');btnMo.setAttribute('aria-pressed','true');btnYr.setAttribute('aria-pressed','false');
     pill.style.left=btnMo.offsetLeft+'px';pill.style.width=btnMo.offsetWidth+'px';
     animNum(document.getElementById('p1v'),92,124.99);
     animNum(document.getElementById('p2v'),183,247,2);
@@ -1361,7 +1288,7 @@ window.addEventListener('load',()=>{
     function resize(){cv.width=sec.offsetWidth;cv.height=sec.offsetHeight;const cols=Math.floor(cv.width/fs);drops=Array.from({length:cols},()=>Math.random()*-50)}
     resize();
     new ResizeObserver(resize).observe(sec);
-    setInterval(()=>{ctx.fillStyle='rgba(4,4,10,0.07)';ctx.fillRect(0,0,cv.width,cv.height);ctx.fillStyle='rgba(0,255,135,0.18)';ctx.font=fs+'px monospace';drops.forEach((y,i)=>{const ch=chars[Math.floor(Math.random()*chars.length)];ctx.fillText(ch,i*fs,y*fs);if(y*fs>cv.height&&Math.random()>0.975)drops[i]=0;drops[i]+=0.5});},50);
+    runWhileVisible(cv,()=>{ctx.fillStyle='rgba(4,4,10,0.07)';ctx.fillRect(0,0,cv.width,cv.height);ctx.fillStyle='rgba(0,255,135,0.18)';ctx.font=fs+'px monospace';drops.forEach((y,i)=>{const ch=chars[Math.floor(Math.random()*chars.length)];ctx.fillText(ch,i*fs,y*fs);if(y*fs>cv.height&&Math.random()>0.975)drops[i]=0;drops[i]+=0.5});},50);
   })();
 
   // Matrix rain in each .fp-r panel
@@ -1380,7 +1307,7 @@ window.addEventListener('load',()=>{
     }
     resize();
     new ResizeObserver(resize).observe(panel);
-    setInterval(()=>{
+    runWhileVisible(cv,()=>{
       ctx.fillStyle='rgba(0,0,0,0.1)';
       ctx.fillRect(0,0,cv.width,cv.height);
       ctx.fillStyle='rgba(0,255,135,0.18)';
@@ -1402,7 +1329,7 @@ const pcObs=new IntersectionObserver(entries=>{
 document.querySelectorAll('.pc').forEach(c=>pcObs.observe(c));
 
 /* ── SPARKLES ──────────────────────────────────────────── */
-if(typeof tsParticles!=='undefined'){
+if(!RM&&typeof tsParticles!=='undefined'){
   tsParticles.load({
     id:'sparkles',
     options:{
@@ -1418,49 +1345,6 @@ if(typeof tsParticles!=='undefined'){
     }
   });
 }
-
-/* ── TESTIMONIALS ──────────────────────────────────────── */
-(function(){
-  const ts=[
-    {q:'Smoove QT + Macros completely changed how I approach NQ. I can finally see the quarterly cycle playing out in real time instead of guessing direction.',n:'jake_nq',r:'Member',rc:[['🔥','14'],['💯','6']],pic:'photo',pi:3,t:'Today at 9:47 AM'},
-    {q:'Pre-market prep in the Discord every single morning. $moove calls the bias, levels are already marked — I just wait for the setup.',n:'dom_es',r:'Member',rc:[['📈','11'],['🔥','9']],pic:'none',t:'Today at 8:22 AM'},
-    {q:'Smoove QT SSMT is the one. Watching NQ and ES diverge to confirm manipulation — it\'s a completely different level of clarity.',n:'marcus_futures',r:'Full Program',rc:[['💯','17'],['🔥','12']],pic:'photo',pi:6,t:'Yesterday at 3:14 PM'},
-    {q:'The course doesn\'t waste your time. It builds on what you already know and fills in the gaps that were costing me money every session.',n:'caleb_j',r:'Full Program',rc:[['✅','8'],['💯','5']],pic:'photo',pi:11,t:'Yesterday at 11:58 AM'},
-    {q:'Smoove PO3 on the 15 min NQ chart with Inducement Macros — once you see it you can\'t unsee it. Been using this combo every single day.',n:'tanya_trades',r:'Member',rc:[['🔥','21'],['📈','13']],pic:'photo',pi:48,t:'2 days ago at 2:31 PM'},
-    {q:'Applied for bot access after about 60 days. The fact that it\'s not just handed out makes you actually take your trading seriously first.',n:'marcus_p',r:'EA Bot',rc:[['💯','19'],['🔥','15']],pic:'photo',pi:52,t:'2 days ago at 10:05 AM',rg:'gold'},
-    {q:'Went annual on the indicators. $83 a month for 5 tools built around ICT methodology on NQ and ES — genuinely the best ROI in my trading setup.',n:'dre_fx',r:'Member',rc:[['💯','9'],['✅','7']],pic:'photo',pi:56,t:'3 days ago at 4:47 PM'},
-    {q:'Smoove QT + Macros runs on my chart every session. Everything else got deleted. The noise is gone.',n:'ryan_scalps',r:'Member',rc:[['🔥','25'],['💯','11']],pic:'none',t:'3 days ago at 9:33 AM'},
-    {q:'Been trading ES for 4 years. Smoove AMDX is the first tool I\'ve seen that actually maps the macro cycle to intraday price action properly.',n:'dk_futures',r:'Full Program',rc:[['📈','16'],['🔥','10']],pic:'photo',pi:57,t:'4 days ago at 1:22 PM'},
-    {q:'Community is what makes this different. 200+ traders all running the same framework — when the bias lines up everyone sees it together.',n:'keisha_nq',r:'Full Program',rc:[['💯','13'],['🔥','8']],pic:'none',t:'4 days ago at 8:55 AM'},
-    {q:'Smoove Inducement Macros is doing exactly what it says. I stopped fighting the trend after the first week of using it.',n:'brandon_es',r:'Member',rc:[['✅','10'],['📈','7']],pic:'photo',pi:8,t:'5 days ago at 3:10 PM'},
-    {q:'Most TradingView indicator packs are stock indicators with a futures label slapped on. These are built differently — you feel it immediately on NQ.',n:'nadia_v',r:'Member',rc:[['🔥','18'],['💯','9']],pic:'photo',pi:16,t:'5 days ago at 11:40 AM'},
-  ];
-  const grps=[ts.slice(0,4),ts.slice(4,8),ts.slice(8,12)];
-  ['col1','col2','col3'].forEach((id,ci)=>{
-    const track=document.getElementById(id);if(!track)return;
-    [...grps[ci],...grps[ci]].forEach(t=>{
-      const el=document.createElement('div');el.className='tcard';
-      const roleClass=t.rg==='gold'?'dc-role gold':'dc-role';
-      const reacts=t.rc.map(([e,c])=>`<span class="dc-r">${e} ${c}</span>`).join('');
-      let avHtml;
-      if(t.pic==='photo') avHtml=`<div class="dc-av"><img src="https://i.pravatar.cc/80?img=${t.pi}" alt="${t.n}" loading="lazy"/></div>`;
-      else if(t.pic==='none') avHtml=`<div class="dc-av no-pic">${t.n[0].toUpperCase()}</div>`;
-      else avHtml=`<div class="dc-av"><img src="https://api.dicebear.com/7.x/${t.st}/svg?seed=${encodeURIComponent(t.n)}&backgroundColor=${t.ac}" alt="${t.n}" loading="lazy"/></div>`;
-      el.innerHTML=`
-        <div class="dc-top">
-          ${avHtml}
-          <div class="dc-meta">
-            <span class="dc-name">${t.n}</span>
-            <span class="${roleClass}">${t.r}</span>
-            <span class="dc-time">${t.t}</span>
-          </div>
-        </div>
-        <div class="dc-msg">${t.q}</div>
-        <div class="dc-reacts">${reacts}</div>`;
-      track.appendChild(el);
-    });
-  });
-})();
 
 /* ── INDICATOR SHOWCASE CAROUSEL ───────────────────────── */
 var iscIdx=0,iscTotal=3;
@@ -1608,8 +1492,10 @@ function setTab(id){
       ctx.beginPath();ctx.arc(p.x,p.y,2.5,0,Math.PI*2);
       ctx.fillStyle='#00FF87';ctx.fill();
     });
-    requestAnimationFrame(animate);
+    if(!RM&&mapOn)requestAnimationFrame(animate);
   }
+  let mapOn=false;
+  new IntersectionObserver(([e])=>{const was=mapOn;mapOn=e.isIntersecting;if(mapOn&&!was&&!RM)requestAnimationFrame(animate)}).observe(wrap);
   animate();
 })();
 
@@ -1633,13 +1519,13 @@ document.querySelectorAll('.rv').forEach(el=>revObs.observe(el));
 </script>
 
 <!-- Cookie Consent Banner -->
-<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0D0D1A;border-top:1px solid rgba(0,255,135,.12);padding:16px 40px;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
-  <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(255,255,255,.55);margin:0;max-width:700px">We use cookies to improve your experience on this site. By continuing to browse, you agree to our use of cookies. <a href="privacy.html" style="color:var(--g);text-decoration:none">Privacy Policy</a></p>
-  <button id="cookieAccept" style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;background:var(--g);color:#000;border:none;padding:10px 24px;cursor:pointer;font-weight:700;white-space:nowrap">Accept</button>
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0D0D1A;border-top:1px solid rgba(0,255,135,.12);padding:16px 20px;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+  <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(255,255,255,.6);margin:0;max-width:700px">We use cookies to improve your experience on this site. By continuing to browse, you agree to our use of cookies. <a href="privacy.html" style="color:var(--g);text-decoration:underline;text-underline-offset:2px">Privacy Policy</a></p>
+  <button id="cookieAccept" style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--g);color:#000;border:none;padding:10px 24px;cursor:pointer;font-weight:700;white-space:nowrap">Accept</button>
 </div>
 <script>
   (function(){
-    if(!localStorage.getItem('cookie_ok') && window.innerWidth>=768){
+    if(!localStorage.getItem('cookie_ok')){
       document.getElementById('cookieBanner').style.display='flex';
     }
     document.getElementById('cookieAccept').addEventListener('click',function(){
@@ -1651,7 +1537,7 @@ document.querySelectorAll('.rv').forEach(el=>revObs.observe(el));
 
 <script>
   if('scrollRestoration' in history){history.scrollRestoration='manual';}
-  function goTop(){window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0;}
+  function goTop(){if(location.hash)return;window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0;}
   goTop();
   window.addEventListener('load',function(){goTop();setTimeout(goTop,0);setTimeout(goTop,100);setTimeout(goTop,300);});
   window.addEventListener('pageshow',function(){goTop();setTimeout(goTop,0);setTimeout(goTop,100);});
