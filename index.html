@@ -4,19 +4,19 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>$moove Market Mastery | Futures, FX & Metals Trading</title>
-<meta name="description" content="NQ &amp; ES futures trading education: proprietary TradingView indicators, a structured course, an active community and MT5 bot access."/>
+<meta name="description" content="NQ &amp; ES futures trading education: proprietary TradingView indicators, a structured course and a members’ community."/>
 <link rel="canonical" href="https://smoovemarketmastery.github.io/smoove-website/"/>
 <link rel="icon" type="image/png" href="images/logo-192.png"/>
 <link rel="apple-touch-icon" href="images/logo-192.png"/>
 <meta name="theme-color" content="#04040A"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="$moove Market Mastery | Futures, FX &amp; Metals Trading"/>
-<meta property="og:description" content="Proprietary indicators. Structured curriculum. Active community. MT5 bot access. NQ &amp; ES focused — built for serious futures traders ready to stop guessing."/>
+<meta property="og:description" content="Five proprietary TradingView indicators, an 18-lesson course and a members&apos; Discord, built on one AMDX/QT framework for NQ &amp; ES futures."/>
 <meta property="og:image" content="https://smoovemarketmastery.github.io/smoove-website/images/community-hero.jpg"/>
 <meta property="og:url" content="https://smoovemarketmastery.github.io/smoove-website/"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="$moove Market Mastery | Futures, FX &amp; Metals Trading"/>
-<meta name="twitter:description" content="Proprietary indicators. Structured curriculum. Active community. MT5 bot access. NQ &amp; ES focused — built for serious futures traders ready to stop guessing."/>
+<meta name="twitter:description" content="Five proprietary TradingView indicators, an 18-lesson course and a members&apos; Discord, built on one AMDX/QT framework for NQ &amp; ES futures."/>
 <meta name="twitter:image" content="https://smoovemarketmastery.github.io/smoove-website/images/community-hero.jpg"/>
 
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
  "name": "$moove Market Mastery",
  "url": "https://smoovemarketmastery.github.io/smoove-website/",
  "logo": "https://smoovemarketmastery.github.io/smoove-website/images/logo-192.png",
- "description": "NQ & ES futures trading education: proprietary TradingView indicators, a structured course, an active community and MT5 bot access."
+ "description": "NQ & ES futures trading education: proprietary TradingView indicators, a structured course and a members’ community."
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -188,6 +188,7 @@ ul{list-style:none}
   opacity:0;transition:opacity .5s .42s;
 }
 .h-ctas.on{opacity:1}
+.h-price{font-size:14px;line-height:1.6;color:rgba(255,255,255,.65);text-align:center;margin:-40px 0 48px;max-width:520px}
 
 /* Hero stats row */
 .h-stats{
@@ -342,7 +343,7 @@ ul{list-style:none}
 .save-pill.show{opacity:1}
 
 /* Price cards */
-.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--b);border:1px solid var(--b)}
+.pcards{display:grid;grid-template-columns:repeat(2,1fr);max-width:920px;margin:0 auto;gap:1px;background:var(--b);border:1px solid var(--b)}
 .pc{position:relative;background:var(--card);padding:36px 28px;display:flex;flex-direction:column;opacity:0;transform:translateY(18px);filter:blur(4px);transition:opacity .55s,transform .55s,filter .55s,background .25s}
 .pc.in{opacity:1;transform:none;filter:none}
 .pc.pop{background:var(--card2);box-shadow:inset 0 1px 0 rgba(0,255,135,.09)}
@@ -356,6 +357,7 @@ ul{list-style:none}
 .pc-num{font-family:var(--fd);font-size:54px;font-weight:800;line-height:.95}
 .pc-per{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.6);margin-left:4px;align-self:flex-end;margin-bottom:5px}
 .pc-save{font-family:var(--fm);font-size:11px;color:rgba(0,255,135,0.85);letter-spacing:.06em;min-height:16px;margin-bottom:18px}
+.pc-assure{font-size:13px;line-height:1.6;color:rgba(255,255,255,.65);margin:-8px 0 20px}
 .pc-btn{width:100%;padding:15px;border:none;font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;margin-bottom:20px;transition:all .2s;display:block;text-align:center;font-weight:700}
 .pcb-p{background:var(--g);color:#000;box-shadow:0 4px 18px rgba(0,0,0,.4)}
 .pcb-p:hover{background:var(--g2);box-shadow:0 6px 28px rgba(0,0,0,.45);transform:translateY(-1px)}
@@ -415,7 +417,7 @@ ul{list-style:none}
 .faq-ic{flex-shrink:0;width:18px;height:18px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:transform .3s,border-color .25s;font-size:13px;color:var(--g);font-family:var(--fm)}
 .faq-item.open .faq-ic{transform:rotate(45deg);border-color:rgba(0,255,135,.3)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(.22,1,.36,1);font-size:15px;color:rgba(255,255,255,.62);line-height:1.82;padding:0 22px}
-.faq-item.open .faq-a{max-height:300px;padding-bottom:20px}
+.faq-item.open .faq-a{max-height:1200px;padding-bottom:20px}
 
 /* ── AFFILIATE ───────────────────────────────────────────── */
 .aff-sec{background:var(--bg2);border-top:1px solid rgba(0,255,135,.1);border-bottom:1px solid rgba(0,255,135,.1);position:relative;overflow:hidden}
@@ -552,7 +554,7 @@ ul{list-style:none}
 .hst{padding:12px 13px}.hst-v{font-size:16px}
   .footer-in{grid-template-columns:1fr}
   .footer-bot{flex-direction:column}.fdisc{text-align:left}
-  .pl-header{flex-direction:column}
+  .pl-header{flex-direction:column;align-items:flex-start}
   .save-pill{display:none}
   .logos-grid{grid-template-columns:repeat(2,1fr)}
   #worldMapWrap{height:320px}
@@ -585,29 +587,30 @@ ul{list-style:none}
   <div class="h-veil"></div>
   <div class="h-grid"></div>
   <div class="h-inner">
-    <div class="h-badge" id="hbadge">Futures &bull; FX &bull; Metals &mdash; Unlock The Matrix</div>
+    <div class="h-badge" id="hbadge">Built for NQ &amp; ES &bull; Works on FX &amp; Metals</div>
 
     <div class="h-head" id="hhl">
       <h1 class="h-hl"><span class="g">$MOOVE</span> <span class="w">MARKET MASTERY</span></h1>
     </div>
 
     <div class="h-divider" id="hdiv">
-      <span>Intermediate &mdash; Advanced &mdash; Institutional Edge</span>
+      <span>For intermediate &amp; advanced traders</span>
     </div>
 
     <p class="h-copy" id="hcopy">
-      This isn't for everyone. It's for the trader who's done losing to the algorithm — and ready to trade like one. Proprietary indicators. Structured curriculum. Live community. MT5 bot access. One ecosystem.
+      This isn't for everyone. Five proprietary TradingView indicators, an 18-lesson course and a members' Discord, all built on one framework: AMDX/QT, an ICT-style read of how price is delivered on NQ and ES.
     </p>
 
     <div class="h-ctas" id="hctas">
-      <a href="#pricing" class="btn-p">Get Started Today</a>
-      <a href="#pillars" class="btn-gh">Explore the Program &darr;</a>
+      <a href="#pricing" class="btn-p">See Plans &amp; Pricing</a>
+      <a href="#pillars" class="btn-gh">What's Included &darr;</a>
     </div>
+    <p class="h-price">Two plans: Indicators $124.99/mo or Full Program $247/mo. Annual billing saves up to $767.</p>
 
     <div class="h-stats" id="hstats">
-      <div class="hst"><span class="hst-v">NO LIMITS</span><span class="hst-l">Futures, FX &amp; Metals</span></div>
+      <div class="hst"><span class="hst-v">NQ &amp; ES</span><span class="hst-l">Futures focus</span></div>
       <div class="hst"><span class="hst-v">AMDX/QT</span><span class="hst-l">Methodology</span></div>
-      <div class="hst"><span class="hst-v">XAUUSD</span><span class="hst-l">EA Bot — MT5</span></div>
+      <div class="hst"><span class="hst-v">5 Tools</span><span class="hst-l">On TradingView</span></div>
     </div>
   </div>
 </section>
@@ -673,7 +676,6 @@ ul{list-style:none}
         </ul>
       </div>
       <div class="gc feat">
-        <span class="gc-badge">Most Popular</span>
         <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;margin-bottom:18px"><img src="images/community-hero.webp" width="800" height="450" loading="lazy" alt="$moove Community" style="width:100%;height:100%;object-fit:cover;display:block"/></div>
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
           <img src="images/logo.webp" width="128" height="128" loading="lazy" alt="$moove logo" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;display:block"/>
@@ -684,7 +686,6 @@ ul{list-style:none}
           <li>Chart breakdowns & analysis</li>
           <li>Trade idea sharing</li>
           <li>Shared trade reviews & feedback</li>
-          <li>Direct mentor access</li>
         </ul>
       </div>
       <div class="gc">
@@ -693,7 +694,7 @@ ul{list-style:none}
           <img src="images/logo.webp" width="128" height="128" loading="lazy" alt="$moove logo" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;display:block"/>
           <h3 style="margin:0"><span class="g">TradingView</span> Indicators</h3>
         </div>
-        <p>5 proprietary tools built around NQ &amp; ES futures using AMDX/QT methodology — versatile enough to apply across any market. Cut the noise, see what institutional players see.</p>
+        <p>5 proprietary tools built around NQ &amp; ES futures using AMDX/QT methodology — versatile enough to apply across any market. Each one marks a stage of the AMDX/QT price delivery cycle on your chart.</p>
         <ul class="pl">
           <li>Smoove AMDX</li>
           <li>Smoove PO3</li>
@@ -709,12 +710,11 @@ ul{list-style:none}
         <img src="images/bot-hero.webp" width="800" height="1000" loading="lazy" alt="$moove EA Trading Bot" style="width:100%;border-radius:8px;display:block"/>
       </div>
       <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:0">
-        <div class="bb-badge">Application Only &mdash; Exclusive Access</div>
+        <div class="bb-badge">Application Only &mdash; Members Only</div>
         <h3 class="bb-title">$moove <span class="g">EA</span> <span class="gd">Trading</span> Bot</h3>
         <p class="bb-desc">Earn access to the $moove Expert Advisor for MetaTrader 5, trading Gold (XAUUSD). Bot access is exclusively available to active $moove members — you must hold an active Indicators or Full Program membership before you can apply.</p>
         <div class="bb-btns" style="margin-bottom:28px">
           <a href="#pricing" class="btn-gd">Become a Member First</a>
-          <a href="#pricing" class="btn-sm">View Requirements</a>
         </div>
         <div class="bot-panel">
           <div class="bp-h">Specification &mdash; XAUUSD Bot</div>
@@ -723,7 +723,7 @@ ul{list-style:none}
           <div class="bp-r"><span class="bp-k">Strategy Type</span><span class="bp-v">Algorithmic EA</span></div>
           <div class="bp-r"><span class="bp-k">Access Model</span><span class="bp-v gd">Application Only</span></div>
           <div class="bp-r"><span class="bp-k">Membership Required</span><span class="bp-v g">Yes &mdash; Active</span></div>
-          <div class="bp-r"><span class="bp-k">Status</span><span class="bp-v g">&#9679; Accepting Applications</span></div>
+          <div class="bp-r"><span class="bp-k">Minimum Deposit</span><span class="bp-v">$5,000</span></div>
         </div>
       </div>
     </div>
@@ -750,7 +750,7 @@ ul{list-style:none}
           <div class="isc-slide">
             <div class="isc-l">
               <h3 class="isc-name">5 Proprietary<br><span class="g">Indicators</span></h3>
-              <p class="isc-desc">All 5 Smoove indicators running live on TradingView — built on NQ &amp; ES, applicable across Futures, FX &amp; Metals. No repainting. No lag. No guesswork.</p>
+              <p class="isc-desc">All 5 Smoove indicators running live on TradingView — built on NQ &amp; ES, applicable across Futures, FX &amp; Metals.</p>
               <ul class="isc-feats">
                 <li>Smoove AMDX</li>
                 <li>Smoove PO3</li>
@@ -758,7 +758,7 @@ ul{list-style:none}
                 <li>Smoove QT SSMT</li>
                 <li>Smoove QT + Macros</li>
               </ul>
-              <div class="isc-access">Indicators Plan &amp; Full Program</div>
+              <div class="isc-access">Included in both plans</div>
             </div>
             <div class="isc-r">
               <div class="isc-devices">
@@ -833,7 +833,6 @@ ul{list-style:none}
                 <li>Daily pre-market bias &amp; levels</li>
                 <li>Live NQ &amp; ES session coverage</li>
                 <li>Trade idea sharing &amp; review</li>
-                <li>Direct mentor access</li>
                 <li>EA Bot application channel</li>
               </ul>
               <div class="isc-access">Full Program Only</div>
@@ -920,6 +919,7 @@ ul{list-style:none}
           <span style="font-family:var(--fm);font-size:11px;color:rgba(0,255,135,.75);letter-spacing:.08em;text-transform:uppercase">TradingView username required at checkout</span>
         </div>
         <button class="pc-btn pcb-p" id="btn1" onclick="window.open('https://whop.com/checkout/plan_3TJTY9x6shzpz','_blank')">Get Indicators</button>
+        <p class="pc-assure">Checkout opens on Whop in a new tab. Indicators are added to your TradingView account within 24 hours. All sales final; cancel monthly anytime.</p>
         <div class="pc-rule"></div>
         <div class="pc-incl">Includes</div>
         <ul class="pc-feats">
@@ -931,12 +931,11 @@ ul{list-style:none}
           <li><span class="dot g"></span>Indicator community access</li>
           <li><span class="dot"></span>Trading course</li>
           <li><span class="dot"></span>Full community access</li>
-          <li><span class="dot"></span>Mentorship</li>
         </ul>
       </div>
 
       <div class="pc pop" id="card2" data-save="Save $767/yr">
-        <div class="pc-badge">Most Popular</div>
+        <div class="pc-badge">Complete System</div>
         <img src="images/course-hero.webp" width="800" height="450" loading="lazy" alt="$moove Full Program" style="width:100%;border-radius:6px;margin-bottom:18px;display:block"/>
         <h3 class="pc-name">Full Program</h3>
         <p class="pc-desc">All 5 indicators + 6-chapter course (18 lessons) + active community. The complete $moove system.</p>
@@ -947,6 +946,7 @@ ul{list-style:none}
           <span style="font-family:var(--fm);font-size:11px;color:rgba(0,255,135,.75);letter-spacing:.08em;text-transform:uppercase">TradingView username required at checkout</span>
         </div>
         <button class="pc-btn pcb-p" id="btn2" onclick="window.open('https://whop.com/checkout/plan_G1kXYvouTIfLT','_blank')">Join Full Program</button>
+        <p class="pc-assure">Checkout opens on Whop in a new tab. The course and Discord unlock right away; indicators are added within 24 hours. All sales final; cancel monthly anytime.</p>
         <div class="pc-rule"></div>
         <div class="pc-incl">Includes</div>
         <ul class="pc-feats">
@@ -957,31 +957,13 @@ ul{list-style:none}
           <li><span class="dot g"></span>Smoove QT + Macros</li>
           <li><span class="dot g"></span>Trading course</li>
           <li><span class="dot g"></span>Full community access</li>
-          <li><span class="dot g"></span>Mentorship</li>
         </ul>
       </div>
 
-      <div class="pc">
-        <img src="images/bot-hero.webp" width="800" height="1000" loading="lazy" alt="$moove EA Bot" style="width:100%;border-radius:6px;margin-bottom:18px;display:block"/>
-        <h3 class="pc-name">EA Bot Access</h3>
-        <p class="pc-desc">Active members only — must hold an Indicators or Full Program membership before applying.</p>
-        <div class="pc-save"></div>
-        <button class="pc-btn pcb-g" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Become a Member First</button>
-        <div class="pc-rule"></div>
-        <div class="pc-incl">Requirements</div>
-        <ul class="pc-feats">
-          <li><span class="dot g"></span>Active $moove membership required</li>
-          <li><span class="dot g"></span>MT5 platform required</li>
-          <li><span class="dot g"></span>Min deposit $5,000</li>
-          <li><span class="dot g"></span>Application + review</li>
-          <li><span class="dot"></span>Open enrollment</li>
-          <li><span class="dot"></span>Limited spots available</li>
-        </ul>
-      </div>
     </div>
 
     <p class="pr-note rv">
-      // All plans include eligibility to apply for EA Bot access. Bot access is application-only and granted separately.
+      Either plan lets you apply for EA Bot access after you join. The bot runs on MT5, trades XAUUSD and needs a $5,000 minimum deposit. Access is by application and review.
     </p>
   </div>
 </section>
@@ -992,7 +974,7 @@ ul{list-style:none}
     <div class="aff-badge">Members Only Program</div>
     <img src="images/affiliate-hero.webp" width="1280" height="854" loading="lazy" alt="$moove Affiliate Program" style="width:100%;max-width:960px;border-radius:10px;border:1px solid rgba(0,255,135,.12)"/>
     <a href="#pricing" class="btn-gd" style="margin-top:8px">Become a Member to Unlock</a>
-    <p class="aff-note">// Active Indicators or Full Program membership required to access affiliate link</p>
+    <p class="aff-note">Active Indicators or Full Program membership required to access affiliate link</p>
   </div>
 </section>
 
@@ -1012,7 +994,6 @@ ul{list-style:none}
           <div class="spec-r"><span class="spec-k">Platform</span><span class="spec-v">TradingView (any plan)</span></div>
           <div class="spec-r"><span class="spec-k">Total Indicators</span><span class="spec-v g">5 Proprietary Tools</span></div>
           <div class="spec-r"><span class="spec-k">Methodology</span><span class="spec-v g">AMDX/QT</span></div>
-          <div class="spec-r"><span class="spec-k">Updates</span><span class="spec-v g">Continuous</span></div>
         </div>
         <a href="#pricing" class="btn-p">Get Indicators</a>
       </div>
@@ -1035,16 +1016,16 @@ ul{list-style:none}
     <div class="map-h rv">
       <div class="ey">Global Community</div>
       <h2 class="sh" style="font-size:clamp(30px,4vw,52px);margin-bottom:16px">
-        <span style="color:var(--text)">Traders Everywhere.</span><br>
+        <span style="color:var(--text)">Trade From Anywhere.</span><br>
         <span class="g">One Edge.</span>
       </h2>
-      <p class="ss" style="max-width:400px;margin:0 auto">$moove members trade from every major financial hub. Same tools, same edge, same community — regardless of timezone.</p>
+      <p class="ss" style="max-width:400px;margin:0 auto">Members get the same tools, the same framework and the same Discord, whatever their timezone.</p>
     </div>
     <div id="worldMapWrap" class="rv d1"></div>
     <div class="map-stats rv d2">
-      <div class="ms"><div class="ms-v">24/7</div><div class="ms-l">Active Community</div></div>
-      <div class="ms"><div class="ms-v">Worldwide</div><div class="ms-l">Same Edge</div></div>
-      <div class="ms"><div class="ms-v">No Borders</div><div class="ms-l">One Edge</div></div>
+      <div class="ms"><div class="ms-v">Discord</div><div class="ms-l">Members&apos; community</div></div>
+      <div class="ms"><div class="ms-v">Any Timezone</div><div class="ms-l">Same tools</div></div>
+      <div class="ms"><div class="ms-v">TradingView</div><div class="ms-l">Any plan works</div></div>
     </div>
   </div>
 </section>
@@ -1090,7 +1071,7 @@ ul{list-style:none}
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-qt">How is $moove different from other trading programs?</span><span class="faq-ic">+</span></button>
-          <div class="faq-a">Most programs sell generic concepts and repackaged ideas. $moove is built around a specific methodology — 5 proprietary TradingView indicators covering the full ICT price delivery cycle, a course built specifically for NQ &amp; ES futures, a live community active during market hours, and a real application pathway to MT5 algorithmic trading on XAUUSD. It's a complete system built for one thing: serious futures traders who are ready to stop guessing.</div>
+          <div class="faq-a">Most programs sell generic concepts and repackaged ideas. $moove is built around a specific methodology — 5 proprietary TradingView indicators covering the full ICT price delivery cycle, a course built specifically for NQ &amp; ES futures, a live community active during market hours, and a real application pathway to MT5 algorithmic trading on XAUUSD. It's one system built for intermediate and advanced NQ and ES traders.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-qt">Do you offer a refund policy?</span><span class="faq-ic">+</span></button>
@@ -1535,13 +1516,6 @@ document.querySelectorAll('.rv').forEach(el=>revObs.observe(el));
   })();
 </script>
 
-<script>
-  if('scrollRestoration' in history){history.scrollRestoration='manual';}
-  function goTop(){if(location.hash)return;window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0;}
-  goTop();
-  window.addEventListener('load',function(){goTop();setTimeout(goTop,0);setTimeout(goTop,100);setTimeout(goTop,300);});
-  window.addEventListener('pageshow',function(){goTop();setTimeout(goTop,0);setTimeout(goTop,100);});
-</script>
 
 </body>
 </html>
