@@ -208,16 +208,10 @@ ul{list-style:none}
 .sh .g{color:var(--g)}
 .ss{font-size:16px;color:rgba(255,255,255,.62);line-height:1.82;font-weight:400}
 
-/* ── EA BOT ─────────────────────────────────────────────────────────────────────────────── */
-.bot-sec{background:var(--bg2);border-bottom:1px solid var(--b)}
+/* ── TRADEFLEX ───────────────────────────────────────────── */
+.tf-sec{background:var(--bg2);border-bottom:1px solid var(--b)}
 
 
-/* Bot banner */
-.bb-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,179,0,.2);padding:4px 10px;margin-bottom:16px}
-.bb-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold)}
-.bb-title{font-family:var(--fd);font-size:clamp(20px,3.2vw,42px);font-weight:700;text-transform:uppercase;line-height:.9;letter-spacing:-.02em;margin-bottom:14px;white-space:nowrap}
-.bb-title .g{color:var(--g)}.bb-title .gd{color:var(--gold)}
-.bb-desc{font-size:16px;color:rgba(255,255,255,.85);line-height:1.82;margin-bottom:32px;max-width:430px}
 .pillars-sec{background:var(--bg2);border-bottom:1px solid var(--b)}
 .pl-header{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:56px;flex-wrap:wrap}
 .pl-header .sh{font-size:clamp(34px,5vw,62px)}
@@ -246,16 +240,11 @@ ul{list-style:none}
 .pl li{font-family:var(--fb);font-size:15px;color:rgba(255,255,255,.78);padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;gap:9px}
 .pl li:last-child{border-bottom:none}
 .pl li::before{content:'→';color:var(--g);font-size:11px}
-.bot-compact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.bot-img{width:100%;border-radius:8px;display:block}
-.bot-panel{background:rgba(0,0,0,.35);border:1px solid rgba(255,179,0,.09);padding:26px;position:relative;z-index:1}
-.bp-h{font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:8px}
-.bp-h::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold)}
-.bp-r{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);font-family:var(--fm);font-size:13px}
-.bp-r:last-child{border-bottom:none}
-.bp-k{color:rgba(255,255,255,.6)}
-.bp-v{color:var(--text);text-align:right}
-.bp-v.g{color:var(--g)}.bp-v.gd{color:var(--gold)}
+.tf-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.tf-img{width:100%;max-width:520px;border-radius:8px;display:block;justify-self:center}
+.tf-title{font-family:var(--fd);font-size:clamp(28px,3.6vw,46px);font-weight:700;text-transform:uppercase;line-height:.95;letter-spacing:-.01em;margin-bottom:16px}
+.tf-title .g{color:var(--g)}
+.tf-desc{font-size:16px;color:rgba(255,255,255,.75);line-height:1.8;margin-bottom:28px;max-width:460px}
 
 /* ── PRICING ─────────────────────────────────────────────── */
 .pricing-sec{background:var(--bg);position:relative;overflow:hidden}
@@ -467,7 +456,7 @@ ul{list-style:none}
   .sec{padding:78px 28px}
   .h-inner{padding:100px 28px 72px}
   .pcards{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}
-  .bot-compact{grid-template-columns:1fr;gap:28px}
+  .tf-grid{grid-template-columns:1fr;gap:28px}
   .pgrid{grid-template-columns:1fr}
   #card2{order:-1}
   .footer-in{grid-template-columns:1fr 1fr}
@@ -499,7 +488,7 @@ ul{list-style:none}
     <a href="#pillars" onclick="closeNav()">Program</a>
     <a href="#pricing" onclick="closeNav()">Pricing</a>
     <a href="#community" onclick="closeNav()">Community</a>
-    <a href="#bot" onclick="closeNav()">Bot Access</a>
+    <a href="#tradeflex" onclick="closeNav()">TradeFlex</a>
   </div>
   <a href="#pricing" class="nc">See Plans</a>
   <button class="ham" id="ham" aria-label="Menu" aria-expanded="false" aria-controls="nl"><span></span><span></span><span></span></button>
@@ -732,7 +721,6 @@ ul{list-style:none}
                 <li>Pre-market bias &amp; levels</li>
                 <li>Live NQ &amp; ES session coverage</li>
                 <li>Trade idea sharing &amp; review</li>
-                <li>EA Bot application channel</li>
               </ul>
               <div class="isc-access">Full Program Only</div>
             </div>
@@ -890,29 +878,17 @@ ul{list-style:none}
 
     </div>
 
-    <p class="pr-note rv">
-      Either plan lets you apply for EA Bot access after you join. The bot runs on MT5, trades XAUUSD and needs a $5,000 minimum deposit. Access is by application and review.
-    </p>
   </div>
 </section>
 
-<!-- ═══ EA BOT ═══ -->
-<section class="sec bot-sec" id="bot">
-  <div class="si bot-compact rv">
-    <img src="images/bot-hero.webp" width="800" height="1000" loading="lazy" alt="$moove EA Trading Bot" class="bot-img"/>
+<!-- ═══ TRADEFLEX ═══ -->
+<section class="sec tf-sec" id="tradeflex">
+  <div class="si tf-grid rv">
+    <img src="images/tradeflex-journal.webp" width="800" height="1066" loading="lazy" alt="TradeFlex Trading Journal" class="tf-img"/>
     <div>
-      <div class="bb-badge">Application Only &mdash; Members Only</div>
-      <h2 class="bb-title">$moove <span class="g">EA</span> <span class="gd">Trading</span> Bot</h2>
-      <p class="bb-desc">An Expert Advisor for MetaTrader 5 that trades gold (XAUUSD). Active Indicators or Full Program members can apply once they&apos;ve joined.</p>
-    <div class="bot-panel">
-      <div class="bp-h">Specification &mdash; XAUUSD Bot</div>
-      <div class="bp-r"><span class="bp-k">Instrument</span><span class="bp-v gd">XAUUSD (Gold)</span></div>
-      <div class="bp-r"><span class="bp-k">Platform</span><span class="bp-v">MetaTrader 5</span></div>
-      <div class="bp-r"><span class="bp-k">Strategy Type</span><span class="bp-v">Algorithmic EA</span></div>
-      <div class="bp-r"><span class="bp-k">Access Model</span><span class="bp-v gd">Application Only</span></div>
-      <div class="bp-r"><span class="bp-k">Membership Required</span><span class="bp-v g">Yes &mdash; Active</span></div>
-      <div class="bp-r"><span class="bp-k">Minimum Deposit</span><span class="bp-v">$5,000</span></div>
-    </div>
+      <h2 class="tf-title">TradeFlex <span class="g">Trading Journal</span></h2>
+      <p class="tf-desc">Log every trade, review your sessions and see the patterns in your own trading. Track, analyze and improve with a journal built for active traders.</p>
+      <a href="https://tradeflexjournal.com" class="btn-p" target="_blank" rel="noopener">Visit TradeFlex</a>
     </div>
   </div>
 </section>
@@ -959,7 +935,7 @@ ul{list-style:none}
       <div class="faq-list rv d1">
         <div class="faq-item open">
           <button class="faq-q"><span class="faq-qt">What's included in each pricing plan?</span><span class="faq-ic">+</span></button>
-          <div class="faq-a">The Indicators plan ($124.99/mo or $1,099/yr) gives you access to all $moove TradingView indicators. The Full Program ($247.00/mo or $2,197/yr) adds the structured trading course and active community. EA Bot access is application-only and separate from both plans.</div>
+          <div class="faq-a">The Indicators plan ($124.99/mo or $1,099/yr) gives you access to all $moove TradingView indicators. The Full Program ($247.00/mo or $2,197/yr) adds the structured trading course and active community.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-qt">Why is a TradingView username required at checkout?</span><span class="faq-ic">+</span></button>
@@ -982,20 +958,12 @@ ul{list-style:none}
           <div class="faq-a">$moove is built for intermediate to advanced traders who already understand the basics of futures trading. If you've never traded before, we recommend getting foundational knowledge first. If you understand how futures work and want to trade at a higher level, this is for you.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q"><span class="faq-qt">What is the EA Bot and how do I qualify?</span><span class="faq-ic">+</span></button>
-          <div class="faq-a">The $moove Expert Advisor is an algorithmic trading bot for MetaTrader 5 trading XAUUSD (Gold). It is not available to all members — access is granted by application only to members who demonstrate readiness and meet our qualifying criteria. Active membership is required to apply.</div>
-        </div>
-        <div class="faq-item">
           <button class="faq-q"><span class="faq-qt">How is $moove different from other trading programs?</span><span class="faq-ic">+</span></button>
-          <div class="faq-a">Most programs sell generic concepts and repackaged ideas. $moove is built around a specific methodology — 5 proprietary TradingView indicators covering the full ICT price delivery cycle, a course built specifically for NQ &amp; ES futures, a members' Discord, and a real application pathway to MT5 algorithmic trading on XAUUSD. It's one system built for intermediate and advanced NQ and ES traders.</div>
+          <div class="faq-a">Most programs sell generic concepts and repackaged ideas. $moove is built around a specific methodology — 5 proprietary TradingView indicators covering the full ICT price delivery cycle, a course built specifically for NQ &amp; ES futures, and a members' Discord. It's one system built for intermediate and advanced NQ and ES traders.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-qt">Do you offer a refund policy?</span><span class="faq-ic">+</span></button>
           <div class="faq-a">All sales are final. We do not offer refunds on any plan — monthly or annual. You can cancel a monthly subscription at any time and retain access through the end of your billing period. For any questions contact us at <span id="faq-email"></span>.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span class="faq-qt">What broker do I need for the EA Bot?</span><span class="faq-ic">+</span></button>
-          <div class="faq-a">The $moove EA Bot runs on MetaTrader 5 (MT5) and trades XAUUSD (Gold). You'll need a broker that supports MT5 and offers XAUUSD. A minimum deposit of $5,000 is required to be considered for EA Bot access. Your broker choice is your own — $moove does not have a broker affiliation or requirement beyond MT5 compatibility.</div>
         </div>
       </div>
     </div>
@@ -1016,7 +984,7 @@ ul{list-style:none}
         <li><a href="#pillars">Trading Course</a></li>
         <li><a href="#community">Community</a></li>
         <li><a href="#indicators">Indicators</a></li>
-        <li><a href="#bot">EA Bot Access</a></li>
+        <li><a href="#tradeflex">TradeFlex Journal</a></li>
         <li><a href="#affiliate">Affiliate Program</a></li>
       </ul>
     </div>
