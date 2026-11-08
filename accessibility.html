@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Accessibility | $moove Market Mastery</title>
+<link rel="canonical" href="https://smoovemarketmastery.github.io/smoove-website/accessibility.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Accessibility | $moove Market Mastery"/>
+<meta property="og:description" content="Accessibility statement for $moove Market Mastery: our WCAG 2.2 AA goal, known limitations and how to report a problem."/>
+<meta property="og:url" content="https://smoovemarketmastery.github.io/smoove-website/accessibility.html"/>
+<meta property="og:image" content="https://smoovemarketmastery.github.io/smoove-website/images/og-card.jpg"/>
+<meta name="description" content="Accessibility statement for $moove Market Mastery: our WCAG 2.2 AA goal, known limitations and how to report a problem."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --g:#00FF87;--g2:#00CC6A;
+  --bg:#04040A;--bg2:#06060F;--bg3:#050510;
+  --card:#0D0D1A;
+  --b:rgba(255,255,255,.05);
+  --text:#F0F0F8;--muted:#7878A8;
+  --fd:'Barlow',sans-serif;
+  --fm:'Space Mono',monospace;
+  --fb:'DM Sans',sans-serif;
+}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.8}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:2px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--g2)}
+::selection{background:var(--g);color:#000}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(4,4,10,.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.04)}
+.nb{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.06em;display:flex;align-items:center;gap:0;position:relative;padding-left:14px}
+.nb::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:22px;background:var(--g)}
+.nb-d{color:var(--g)}
+.nb-m{color:var(--text)}
+.nb-s{font-family:var(--fm);font-size:11px;font-weight:400;color:rgba(255,255,255,.6);letter-spacing:.22em;margin-left:12px;text-transform:uppercase;align-self:center}
+.back{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px;transition:color .2s}
+.back:hover{color:var(--g)}
+.back::before{content:'←'}
+.lhero{padding:80px 60px 52px;border-bottom:1px solid var(--b);background:var(--bg3)}
+.lhero-inner{max-width:800px;margin:0 auto}
+.ley{font-family:var(--fm);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--g);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.ley::before{content:'//';color:rgba(0,255,135,.75);letter-spacing:0}
+.lh1{font-family:var(--fd);font-size:clamp(28px,4vw,46px);font-weight:700;text-transform:uppercase;line-height:.95;letter-spacing:-.01em;margin-bottom:16px}
+.lmeta{font-family:var(--fm);font-size:11px;color:var(--muted);letter-spacing:.1em}
+.lcontent{max-width:800px;margin:0 auto;padding:64px 60px 100px}
+.lsec{margin-bottom:48px}
+.lsec h2{font-family:var(--fd);font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:var(--text);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+.lsec p{font-size:15px;color:rgba(255,255,255,.65);line-height:1.82;margin-bottom:14px}
+.lsec ul{margin:10px 0 14px 0;display:flex;flex-direction:column;gap:8px}
+.lsec ul li{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;padding-left:18px;position:relative}
+.lsec ul li::before{content:'—';position:absolute;left:0;color:rgba(0,255,135,.75);font-size:11px}
+.lsec a{color:var(--g);transition:color .2s}
+.lsec a:hover{color:var(--g2)}
+.lfooter{background:var(--bg3);border-top:1px solid var(--b);padding:28px 60px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.lfooter-brand{font-family:var(--fd);font-size:14px;font-weight:800}.lfooter-brand span{color:var(--g)}
+.lfooter-copy{font-family:var(--fm);font-size:11px;color:var(--muted);letter-spacing:.04em}
+.lfooter-links{display:flex;flex-wrap:wrap;gap:12px 24px}
+.lfooter-links a{font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.lfooter-links a:hover{color:var(--g)}
+.lfooter-links a.active{color:var(--g)}
+@media(max-width:768px){
+  .nav,.lhero,.lcontent,.lfooter{padding-left:24px;padding-right:24px}
+  .lfooter{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nb"><span class="nb-d">$</span><span class="nb-m">moove</span><span class="nb-s">Market Mastery</span></a>
+  <a href="index.html" class="back">Back to Home</a>
+</nav>
+
+<div class="lhero">
+  <div class="lhero-inner">
+    <div class="ley">Legal</div>
+    <h1 class="lh1">Accessibility<br><span style="color:var(--g)">Statement</span></h1>
+    <p class="lmeta">Last updated: November 2026 &nbsp;·&nbsp; $moove Market Mastery</p>
+  </div>
+</div>
+
+<div class="lcontent">
+
+  <div class="lsec">
+    <h2>1. Our Commitment</h2>
+    <p>We want everyone to be able to use the $moove Market Mastery website, including people with disabilities. We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA.</p>
+  </div>
+
+  <div class="lsec">
+    <h2>2. What We Have Done</h2>
+    <p>Measures we have taken include:</p>
+    <ul>
+      <li>Readable text sizes and color contrast that meet WCAG AA</li>
+      <li>Full keyboard navigation with visible focus and a "Skip to content" link</li>
+      <li>Descriptive labels for buttons and controls</li>
+      <li>Touch targets sized for phones</li>
+      <li>Respect for your device&apos;s reduced-motion setting: the animated background shows a still frame instead</li>
+      <li>Layouts that work on phones, tablets and desktops</li>
+    </ul>
+  </div>
+
+  <div class="lsec">
+    <h2>3. Known Limitations</h2>
+    <p>Checkout, membership, the community and the indicators run on third-party platforms (Whop, Discord and TradingView), and we do not control their accessibility. The product screenshots in the showcase are images; the text beside each one describes what it shows.</p>
+  </div>
+
+  <div class="lsec">
+    <h2>4. Feedback</h2>
+    <p>If you have trouble using any part of the website, email us at <a href="mailto:SmooveMarketMastery@gmail.com">SmooveMarketMastery@gmail.com</a> and tell us the page and the problem. We aim to respond within five business days and can provide information in another format.</p>
+  </div>
+
+  <div class="lsec">
+    <h2>5. Contact</h2>
+    <p>For any questions regarding this Accessibility Statement, contact us at:<br>
+    <a href="mailto:SmooveMarketMastery@gmail.com">SmooveMarketMastery@gmail.com</a></p>
+  </div>
+
+</div>
+
+<footer class="lfooter">
+  <div class="lfooter-brand"><span>$</span>moove Market Mastery</div>
+  <div class="lfooter-links">
+    <a href="terms.html">Terms of Service</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="disclaimer.html">Risk Disclaimer</a>
+    <a href="earnings.html">Earnings Disclaimer</a>
+    <a href="cftc.html">CFTC Disclaimer</a>
+    <a href="cookies.html">Cookie Policy</a>
+    <a href="affiliate.html">Affiliate Terms</a>
+    <a href="accessibility.html" class="active">Accessibility</a>
+  </div>
+  <p class="lfooter-copy">&copy; 2026 $moove Market Mastery. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
