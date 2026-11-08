@@ -227,6 +227,7 @@ ul{list-style:none}
 .bb-title .g{color:var(--g)}.bb-title .gd{color:var(--gold)}
 .bb-desc{font-size:16px;color:rgba(255,255,255,.85);line-height:1.82;margin-bottom:32px;max-width:430px}
 .bot-compact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.bot-img{width:100%;border-radius:8px;display:block}
 .bot-panel{background:rgba(0,0,0,.35);border:1px solid rgba(255,179,0,.09);padding:26px;position:relative;z-index:1}
 .bp-h{font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:8px}
 .bp-h::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold)}
@@ -808,11 +809,11 @@ ul{list-style:none}
 <!-- ═══ EA BOT ═══ -->
 <section class="sec bot-sec" id="bot">
   <div class="si bot-compact rv">
+    <img src="images/bot-hero.webp" width="800" height="1000" loading="lazy" alt="$moove EA Trading Bot" class="bot-img"/>
     <div>
       <div class="bb-badge">Application Only &mdash; Members Only</div>
       <h2 class="bb-title">$moove <span class="g">EA</span> <span class="gd">Trading</span> Bot</h2>
       <p class="bb-desc">An Expert Advisor for MetaTrader 5 that trades gold (XAUUSD). Active Indicators or Full Program members can apply once they&apos;ve joined.</p>
-    </div>
     <div class="bot-panel">
       <div class="bp-h">Specification &mdash; XAUUSD Bot</div>
       <div class="bp-r"><span class="bp-k">Instrument</span><span class="bp-v gd">XAUUSD (Gold)</span></div>
@@ -821,6 +822,7 @@ ul{list-style:none}
       <div class="bp-r"><span class="bp-k">Access Model</span><span class="bp-v gd">Application Only</span></div>
       <div class="bp-r"><span class="bp-k">Membership Required</span><span class="bp-v g">Yes &mdash; Active</span></div>
       <div class="bp-r"><span class="bp-k">Minimum Deposit</span><span class="bp-v">$5,000</span></div>
+    </div>
     </div>
   </div>
 </section>
@@ -1135,8 +1137,16 @@ function iscGo(idx){iscIdx=idx;iscUpdate()}
   /* Projection: equirectangular, fit to W×H */
   function proj(lat,lng){return{x:(lng+180)/360*W,y:(90-lat)/180*H};}
 
-  const cities=[]; // city pins implied a member presence nobody can verify
-  const conns=[];
+  const cities=[
+    {lat:40.71,lng:-74.01,name:'New York'},
+    {lat:29.76,lng:-95.37, name:'Houston'},
+    {lat:51.51,lng:-0.13, name:'London'},
+    {lat:25.20,lng:55.27, name:'Dubai'},
+    {lat:1.35, lng:103.82,name:'Singapore'},
+    {lat:35.68,lng:139.65,name:'Tokyo'},
+    {lat:-33.87,lng:151.21,name:'Sydney'},
+  ];
+  const conns=[[0,1],[2,3],[4,5],[4,6]];
   const arcData=[];
 
   /* ── Land rasterisation ── */
