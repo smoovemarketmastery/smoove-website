@@ -111,7 +111,6 @@ ul{list-style:none}
   transition:all .2s;cursor:pointer;display:inline-block;
 }
 .nc:hover{background:var(--g);color:#000;border-color:var(--g)}
-@media(max-width:640px){.nc{display:none}}
 .ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
 .ham span{display:block;width:22px;height:1px;background:var(--text);transition:all .3s}
 .ham.o span:nth-child(1){transform:translateY(6px) rotate(45deg)}
@@ -281,7 +280,7 @@ ul{list-style:none}
 .bot-panel{background:rgba(0,0,0,.35);border:1px solid rgba(255,179,0,.09);padding:26px;position:relative;z-index:1}
 .bp-h{font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:8px}
 .bp-h::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold)}
-.bp-r{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);font-family:var(--fm);font-size:11px}
+.bp-r{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);font-family:var(--fm);font-size:13px}
 .bp-r:last-child{border-bottom:none}
 .bp-k{color:rgba(255,255,255,.6)}
 .bp-v{color:var(--text)}
@@ -555,8 +554,10 @@ ul{list-style:none}
   .logos-grid{grid-template-columns:repeat(2,1fr)}
   #worldMapWrap{height:320px}
   .gc div[style*="display:flex"] img[src*="logo"]{width:26px;height:26px}
-  .gc h3{font-size:15px}
+  .gc h3{font-size:17px}
 }
+/* Last, so no breakpoint above can show it on phones again. */
+@media(max-width:640px){.nc{display:none}}
 </style>
 </head>
 <body>
@@ -1233,8 +1234,8 @@ function setTog(mode){
   if(isYr){
     btnYr.classList.add('on');btnMo.classList.remove('on');btnYr.setAttribute('aria-pressed','true');btnMo.setAttribute('aria-pressed','false');
     pill.style.left=btnYr.offsetLeft+'px';pill.style.width=btnYr.offsetWidth+'px';
-    animNum(document.getElementById('p1v'),124.99,92);
-    animNum(document.getElementById('p2v'),247,183,2);
+    animNum(document.getElementById('p1v'),124.99,91.58);
+    animNum(document.getElementById('p2v'),247,183.08,2);
     document.getElementById('p1per').textContent='/mo USD';
     document.getElementById('p1save').textContent='// BILLED $1,099/YR — SAVE $401';
     document.getElementById('p2save').textContent='// BILLED $2,197/YR — SAVE $767';
@@ -1244,8 +1245,8 @@ function setTog(mode){
   } else {
     btnMo.classList.add('on');btnYr.classList.remove('on');btnMo.setAttribute('aria-pressed','true');btnYr.setAttribute('aria-pressed','false');
     pill.style.left=btnMo.offsetLeft+'px';pill.style.width=btnMo.offsetWidth+'px';
-    animNum(document.getElementById('p1v'),92,124.99);
-    animNum(document.getElementById('p2v'),183,247,2);
+    animNum(document.getElementById('p1v'),91.58,124.99);
+    animNum(document.getElementById('p2v'),183.08,247,2);
     document.getElementById('p1per').textContent='/mo USD';
     document.getElementById('p1save').textContent='';
     document.getElementById('p2save').textContent='';
