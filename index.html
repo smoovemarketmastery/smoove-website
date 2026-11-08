@@ -1056,47 +1056,74 @@ ham.addEventListener('click',()=>{ham.classList.toggle('o');nl.classList.toggle(
 function closeNav(){ham.classList.remove('o');nl.classList.remove('open');ham.setAttribute('aria-expanded','false')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nl.classList.contains('open')){closeNav();ham.focus()}});
 
-/* Animations run only while on screen, and never for reduced-motion visitors. */
+/* ── MATRIX RAIN ─────────────────────────────────────────── */
+/* Plain-JS port of the owner's MatrixRain React component (same defaults and behavior).
+   canvas: the element to draw on (sized by CSS). hover: element that receives pointer moves. */
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function runWhileVisible(el,fn,ms){if(RM)return;let id=0;new IntersectionObserver(([e])=>{if(e.isIntersecting){if(!id)id=setInterval(fn,ms)}else{clearInterval(id);id=0}}).observe(el)}
-
-/* ── HERO CANVAS — MATRIX RAIN ──────────────────────────── */
-(function(){
-  const canvas=document.getElementById('heroBg');
-  const ctx=canvas.getContext('2d');
-  const CHARS='01';
-  const FS=20;
-  const COLOR='#00FF87';
-  const FADE=0.08;
-  const SPEED=1.0;
-  let drops=[];
-
+function matrixRain(canvas,hover,opts){
+  const o=Object.assign({background:'#020604',characters:'0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン',color:'#39ff68',density:0.9,fontSize:28,glow:8,highlight:'#eaffed',pointerResponse:true,speed:1,trail:0.9},opts);
+  const ctx=canvas.getContext('2d',{alpha:false});if(!ctx)return;
+  const clamp=(v,a,b)=>Math.min(Math.max(v,a),b);
+  const rnd=s=>{const v=Math.sin(s*12.9898+78.233)*43758.5453;return v-Math.floor(v)};
+  const col=i=>{const seed=i*47.17+11.3;return{head:1.5-rnd(seed+2.4)*10.5,seed,velocity:9+rnd(seed+5.7)*11}};
+  const fs=clamp(o.fontSize,10,32),dens=clamp(o.density,0.45,1.4),spd=clamp(o.speed,0.2,2.5),trail=clamp(o.trail,0.72,0.97),glow=clamp(o.glow,0,18);
+  const glyphs=Array.from(o.characters),font=`500 ${fs}px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace`;
+  const pointer={active:false,x:0,y:0};
+  let columns=[],cw=fs/dens,frame,last=performance.now(),elapsed=0,acc=0,visible=true,reduce=RM;
+  const ch=s=>glyphs[Math.floor(rnd(s)*glyphs.length)]||glyphs[0]||'0';
+  const box=()=>canvas.getBoundingClientRect();
   function resize(){
-    canvas.width=window.innerWidth;
-    canvas.height=window.innerHeight;
-    const cols=Math.floor(canvas.width/FS);
-    drops=[];
-    for(let i=0;i<cols;i++) drops[i]=Math.random()*-100;
+    const b=box(),r=Math.min(window.devicePixelRatio||1,2),w=Math.max(1,Math.round(b.width*r)),h=Math.max(1,Math.round(b.height*r));
+    if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h}
+    ctx.setTransform(r,0,0,r,0,0);cw=fs/dens;
+    columns=Array.from({length:Math.ceil(b.width/cw)+1},(_,i)=>col(i));
+    ctx.fillStyle=o.background;ctx.fillRect(0,0,b.width,b.height);
   }
-  resize();
-  window.addEventListener('resize',resize);
-
-  const chars=CHARS.split('');
-  function draw(){
-    ctx.fillStyle=`rgba(0,0,0,${FADE})`;
-    ctx.fillRect(0,0,canvas.width,canvas.height);
-    ctx.fillStyle=COLOR;
-    ctx.font=`${FS}px monospace`;
-    for(let i=0;i<drops.length;i++){
-      const ch=chars[Math.floor(Math.random()*chars.length)];
-      ctx.fillText(ch,i*FS,drops[i]*FS);
-      if(drops[i]*FS>canvas.height&&Math.random()>0.975) drops[i]=0;
-      drops[i]+=SPEED;
-    }
+  function setFont(){ctx.font=font;ctx.textAlign='center';ctx.textBaseline='middle'}
+  function drawStatic(){
+    const b=box();ctx.globalAlpha=1;ctx.fillStyle=o.background;ctx.fillRect(0,0,b.width,b.height);setFont();
+    columns.forEach((c,i)=>{
+      const x=i*cw+cw*0.5,len=10+Math.floor(rnd(c.seed+8)*16);
+      for(let k=0;k<len;k++){
+        const row=Math.floor(c.head)-k,y=row*fs;if(y<-fs||y>b.height+fs)continue;
+        const p=k/Math.max(len-1,1);ctx.globalAlpha=Math.pow(1-p,2.2);ctx.fillStyle=k===0?o.highlight:o.color;
+        ctx.shadowColor=o.color;ctx.shadowBlur=glow*(1-p);ctx.fillText(ch(c.seed+row*2.73),x,y);
+      }
+    });
+    ctx.globalAlpha=1;ctx.shadowBlur=0;
   }
-  runWhileVisible(canvas,draw,33);
-  requestAnimationFrame(()=>canvas.classList.add('on'));
-})();
+  function drawTick(dt){
+    const b=box(),rows=Math.ceil(b.height/fs),pr=Math.max(84,fs*7.5);
+    ctx.globalAlpha=(1-trail)*0.5;ctx.fillStyle=o.background;ctx.fillRect(0,0,b.width,b.height);setFont();
+    columns.forEach((c,i)=>{
+      c.head+=c.velocity*spd*dt;
+      if(c.head>rows+4){const n=col(i+Math.floor(elapsed*0.01));c.head=-4-rnd(n.seed+9)*rows*0.5;c.seed=n.seed;c.velocity=n.velocity}
+      const x=i*cw+cw*0.5,y=Math.floor(c.head)*fs,dx=x-pointer.x,dy=y-pointer.y,d=Math.hypot(dx,dy);
+      const inf=o.pointerResponse&&pointer.active?Math.max(0,1-d/pr):0,disp=d>0?(dx/d)*inf*7:0;
+      const g=ch(c.seed+Math.floor(c.head)*2.73+elapsed*0.0041);
+      ctx.globalAlpha=0.82+inf*0.18;ctx.fillStyle=o.color;ctx.shadowColor=o.color;ctx.shadowBlur=glow*(0.7+inf*0.5);ctx.fillText(g,x+disp,y);
+      ctx.globalAlpha=0.62+inf*0.38;ctx.fillStyle=o.highlight;ctx.shadowBlur=glow*0.45;ctx.fillText(g,x+disp,y);
+    });
+    ctx.globalAlpha=1;ctx.shadowBlur=0;
+  }
+  function tick(t){
+    const dt=Math.min((t-last)/1000,0.05);last=t;elapsed+=dt*1000;acc+=dt;
+    if(acc>=0.05){drawTick(acc);acc=0}
+    frame=visible&&!reduce?requestAnimationFrame(tick):undefined;
+  }
+  function start(){if(frame!==undefined||!visible||reduce)return;last=performance.now();frame=requestAnimationFrame(tick)}
+  function stop(){if(frame===undefined)return;cancelAnimationFrame(frame);frame=undefined}
+  hover.addEventListener('pointermove',e=>{const b=box();pointer.active=true;pointer.x=e.clientX-b.left;pointer.y=e.clientY-b.top});
+  hover.addEventListener('pointerleave',()=>{pointer.active=false});
+  const mq=matchMedia('(prefers-reduced-motion: reduce)');
+  mq.addEventListener('change',()=>{reduce=mq.matches;if(reduce){stop();drawStatic()}else start()});
+  new ResizeObserver(()=>{resize();reduce?drawStatic():drawTick(0)}).observe(canvas);
+  new IntersectionObserver(([e])=>{visible=!!(e&&e.isIntersecting);visible?start():stop()}).observe(canvas);
+  resize();reduce?drawStatic():drawTick(0);start();
+}
+matrixRain(document.getElementById('heroBg'),document.querySelector('.hero'),{background:'#04040A'});
+matrixRain(document.querySelector('.isc-matrix'),document.querySelector('.indshow-sec'),{background:'#04040A'});
+requestAnimationFrame(()=>document.getElementById('heroBg').classList.add('on'));
 
 // Email obfuscation — assembled at runtime, bots can't scrape it
 (function(){
@@ -1172,20 +1199,6 @@ function setTog(mode){
 window.addEventListener('load',()=>{
   const bm=document.getElementById('btnMo'),p=document.getElementById('togPill');
   p.style.left=bm.offsetLeft+'px';p.style.width=bm.offsetWidth+'px';
-
-  // Matrix rain on indicator showcase background
-  (function(){
-    const sec=document.querySelector('.indshow-sec');
-    const cv=sec.querySelector('.isc-matrix');
-    const ctx=cv.getContext('2d');
-    const chars='01';
-    const fs=12;
-    let drops=[];
-    function resize(){cv.width=sec.offsetWidth;cv.height=sec.offsetHeight;const cols=Math.floor(cv.width/fs);drops=Array.from({length:cols},()=>Math.random()*-50)}
-    resize();
-    new ResizeObserver(resize).observe(sec);
-    runWhileVisible(cv,()=>{ctx.fillStyle='rgba(4,4,10,0.07)';ctx.fillRect(0,0,cv.width,cv.height);ctx.fillStyle='rgba(0,255,135,0.18)';ctx.font=fs+'px monospace';drops.forEach((y,i)=>{const ch=chars[Math.floor(Math.random()*chars.length)];ctx.fillText(ch,i*fs,y*fs);if(y*fs>cv.height&&Math.random()>0.975)drops[i]=0;drops[i]+=0.5});},50);
-  })();
 
 });
 
