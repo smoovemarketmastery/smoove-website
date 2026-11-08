@@ -227,6 +227,34 @@ ul{list-style:none}
 .bb-title{font-family:var(--fd);font-size:clamp(20px,3.2vw,42px);font-weight:700;text-transform:uppercase;line-height:.9;letter-spacing:-.02em;margin-bottom:14px;white-space:nowrap}
 .bb-title .g{color:var(--g)}.bb-title .gd{color:var(--gold)}
 .bb-desc{font-size:16px;color:rgba(255,255,255,.85);line-height:1.82;margin-bottom:32px;max-width:430px}
+.pillars-sec{background:var(--bg2);border-bottom:1px solid var(--b)}
+.pl-header{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:56px;flex-wrap:wrap}
+.pl-header .sh{font-size:clamp(34px,5vw,62px)}
+
+/* Spotlight grid */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--b);border:1px solid var(--b);margin-bottom:1px}
+.gc{
+  --mx:50%;--my:50%;
+  position:relative;background:var(--card);padding:46px 34px;overflow:hidden;transition:background .3s;
+}
+.gc::before{
+  content:'';pointer-events:none;position:absolute;inset:0;
+  background:radial-gradient(500px circle at calc(var(--mx)*1px) calc(var(--my)*1px),rgba(0,255,135,.06),transparent 55%);
+}
+.gc::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(to right,transparent,var(--g),transparent);
+  transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.22,1,.36,1);
+}
+.gc:hover{background:var(--card2)}
+.gc:hover::after,.gc.feat::after{transform:scaleX(1)}
+.gc.feat{background:var(--card2)}
+.gc h3{font-family:var(--fd);font-size:19px;font-weight:700;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:12px;color:var(--text)}
+.gc h3 .g{color:var(--g)}
+.gc p{font-size:16px;color:rgba(255,255,255,.82);line-height:1.82;margin-bottom:22px}
+.pl li{font-family:var(--fb);font-size:15px;color:rgba(255,255,255,.78);padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;gap:9px}
+.pl li:last-child{border-bottom:none}
+.pl li::before{content:'→';color:var(--g);font-size:11px}
 .bot-compact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .bot-img{width:100%;border-radius:8px;display:block}
 .bot-panel{background:rgba(0,0,0,.35);border:1px solid rgba(255,179,0,.09);padding:26px;position:relative;z-index:1}
@@ -449,11 +477,15 @@ ul{list-style:none}
   .h-inner{padding:100px 28px 72px}
   .pcards{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}
   .bot-compact{grid-template-columns:1fr;gap:28px}
+  .pgrid{grid-template-columns:1fr}
   #card2{order:-1}
   .footer-in{grid-template-columns:1fr 1fr}
   .edge-in{grid-template-columns:1fr}
 }
 @media(max-width:640px){
+  .pl-header{flex-direction:column;align-items:flex-start}
+  .gc div[style*="display:flex"] img[src*="logo"]{width:26px;height:26px}
+  .gc h3{font-size:17px}
 .hst{padding:12px 13px}.hst-v{font-size:16px}
   .footer-in{grid-template-columns:1fr}
   .footer-bot{flex-direction:column}.fdisc{text-align:left}
@@ -473,7 +505,7 @@ ul{list-style:none}
     <span class="nb-d">$</span><span class="nb-m">moove</span><span class="nb-s">Market Mastery</span>
   </a>
   <div class="nl" id="nl">
-    <a href="#indicators" onclick="closeNav()">Program</a>
+    <a href="#pillars" onclick="closeNav()">Program</a>
     <a href="#pricing" onclick="closeNav()">Pricing</a>
     <a href="#community" onclick="closeNav()">Community</a>
     <a href="#bot" onclick="closeNav()">Bot Access</a>
@@ -504,7 +536,7 @@ ul{list-style:none}
 
     <div class="h-ctas" id="hctas">
       <a href="#pricing" class="btn-p">See Plans &amp; Pricing</a>
-      <a href="#indicators" class="btn-gh">What's Included &darr;</a>
+      <a href="#pillars" class="btn-gh">What's Included &darr;</a>
     </div>
     <p class="h-price" id="hprice">Two plans: Indicators $124.99/mo or Full Program $247/mo. Annual billing saves up to $767.</p>
 
@@ -541,6 +573,71 @@ ul{list-style:none}
     <span>SMOOVE QT + MACROS</span><span class="sep">✦</span>
   </div>
 </div>
+
+<!-- ═══ PILLARS ═════════════════════════════════════════════ -->
+<section class="sec pillars-sec" id="pillars">
+  <div class="si">
+    <div class="pl-header rv">
+      <div>
+        <h2 class="sh" style="font-size:clamp(34px,5vw,62px)">
+          <span class="g">Three Pillars.</span><br>
+          <span style="color:var(--text)">One Edge.</span>
+        </h2>
+      </div>
+      <p class="ss" style="max-width:360px">
+        Everything you need to level up your trading — built on NQ &amp; ES,
+        applies across Futures, FX &amp; Metals. Plus an exclusive pathway to automated trading.
+      </p>
+    </div>
+
+    <div class="pgrid rv d1" id="glowGrid">
+      <div class="gc">
+        <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;margin-bottom:18px"><img src="images/course-hero.webp" width="800" height="450" loading="lazy" alt="$moove Market Mastery Premium Course" style="width:100%;height:100%;object-fit:cover;display:block"/></div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <img src="images/logo.webp" width="128" height="128" loading="lazy" alt="$moove logo" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;display:block"/>
+          <h3 style="margin:0"><span class="g">Trading</span> Course</h3>
+        </div>
+        <p>6 chapters. 18 lessons. Built for traders past the basics — NQ &amp; ES focused, with principles that apply across any market.</p>
+        <ul class="pl">
+          <li>Start Here — Course Overview &amp; Workspace Setup</li>
+          <li>How Smart Money Moves Price</li>
+          <li>The XAMD Cycle</li>
+          <li>Execution Tools</li>
+          <li>Risk Management &amp; Account Protection</li>
+          <li>Live Trades</li>
+        </ul>
+      </div>
+      <div class="gc feat">
+        <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;margin-bottom:18px"><img src="images/community-hero.webp" width="800" height="450" loading="lazy" alt="$moove Community" style="width:100%;height:100%;object-fit:cover;display:block"/></div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <img src="images/logo.webp" width="128" height="128" loading="lazy" alt="$moove logo" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;display:block"/>
+          <h3 style="margin:0">Active <span class="g">Community</span></h3>
+        </div>
+        <p>Chart breakdowns, trade ideas, shared trade reviews, and a network of serious traders — NQ &amp; ES focused, trading across Futures, FX &amp; Metals.</p>
+        <ul class="pl">
+          <li>Chart breakdowns & analysis</li>
+          <li>Trade idea sharing</li>
+          <li>Shared trade reviews & feedback</li>
+        </ul>
+      </div>
+      <div class="gc">
+        <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;margin-bottom:18px"><img src="images/indicators-hero.webp" width="800" height="450" loading="lazy" alt="$moove TradingView Indicators" style="width:100%;height:100%;object-fit:cover;display:block"/></div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <img src="images/logo.webp" width="128" height="128" loading="lazy" alt="$moove logo" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;display:block"/>
+          <h3 style="margin:0"><span class="g">TradingView</span> Indicators</h3>
+        </div>
+        <p>5 proprietary tools built around NQ &amp; ES futures using AMDX/QT methodology — versatile enough to apply across any market. Each one marks a stage of the AMDX/QT price delivery cycle on your chart.</p>
+        <ul class="pl">
+          <li>Smoove AMDX</li>
+          <li>Smoove PO3</li>
+          <li>Smoove Inducement Macros</li>
+          <li>Smoove QT SSMT</li>
+          <li>Smoove QT + Macros</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ INDICATOR SHOWCASE ══════════════════════════════════ -->
 <section class="sec indshow-sec" id="indicators">
@@ -750,6 +847,7 @@ ul{list-style:none}
 
     <div class="pcards" id="priceGrid">
       <div class="pc" id="card1" data-save="Save $401/yr">
+        <img src="images/indicators-hero.webp" width="800" height="450" loading="lazy" alt="$moove Indicators" style="width:100%;border-radius:6px;margin-bottom:18px;display:block"/>
         <h3 class="pc-name">Indicators</h3>
         <p class="pc-desc">All $moove TradingView indicators — built on NQ &amp; ES, works across Futures, FX &amp; Metals.</p>
         <div class="pc-amount"><span class="pc-dlr">$</span><span class="pc-num" id="p1v">124.99</span><span class="pc-per" id="p1per">/mo USD</span></div>
@@ -776,6 +874,7 @@ ul{list-style:none}
 
       <div class="pc pop" id="card2" data-save="Save $767/yr">
         <div class="pc-badge">Complete System</div>
+        <img src="images/course-hero.webp" width="800" height="450" loading="lazy" alt="$moove Full Program" style="width:100%;border-radius:6px;margin-bottom:18px;display:block"/>
         <h3 class="pc-name">Full Program</h3>
         <p class="pc-desc">All 5 indicators + 6-chapter course (18 lessons) + active community. The complete $moove system.</p>
         <div class="pc-amount"><span class="pc-dlr">$</span><span class="pc-num" id="p2v">247.00</span><span class="pc-per" id="p2per">/mo USD</span></div>
@@ -924,7 +1023,7 @@ ul{list-style:none}
     <div class="fc">
       <h3>Program</h3>
       <ul>
-        <li><a href="#indicators">Trading Course</a></li>
+        <li><a href="#pillars">Trading Course</a></li>
         <li><a href="#community">Community</a></li>
         <li><a href="#indicators">Indicators</a></li>
         <li><a href="#bot">EA Bot Access</a></li>
@@ -1028,6 +1127,15 @@ setTimeout(()=>document.getElementById('hcopy').classList.add('on'),840);
 setTimeout(()=>document.getElementById('hctas').classList.add('on'),1000);
 setTimeout(()=>document.getElementById('hprice').classList.add('on'),1080);
 setTimeout(()=>document.getElementById('hstats').classList.add('on'),1160);
+
+/* ── SPOTLIGHT CARDS ───────────────────────────────────── */
+document.addEventListener('pointermove',e=>{
+  document.querySelectorAll('.gc').forEach(card=>{
+    const r=card.getBoundingClientRect();
+    card.style.setProperty('--mx',e.clientX-r.left);
+    card.style.setProperty('--my',e.clientY-r.top);
+  });
+});
 
 /* ── PRICING TOGGLE ────────────────────────────────────── */
 let isYr=false;
