@@ -133,15 +133,6 @@ ul{list-style:none}
 .h-inner{position:relative;z-index:4;max-width:1280px;margin:0 auto;padding:120px 60px 80px;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center}
 
 /* Hero badge */
-.h-badge{
-  display:inline-flex;align-items:center;gap:7px;
-  font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--g);border:1px solid rgba(0,255,135,.18);padding:5px 13px;
-  background:rgba(0,255,135,.03);margin-bottom:32px;
-  opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s;
-}
-.h-badge.on{opacity:1;transform:none}
-.h-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--g)}
 
 /* Hero headline */
 .h-head{
@@ -520,7 +511,6 @@ ul{list-style:none}
   <div class="h-veil"></div>
   <div class="h-grid"></div>
   <div class="h-inner">
-    <div class="h-badge" id="hbadge">Built for NQ &amp; ES &bull; Works on FX &amp; Metals</div>
 
     <div class="h-head" id="hhl">
       <h1 class="h-hl"><span class="g">$MOOVE</span> <span class="w">MARKET MASTERY</span></h1>
@@ -1120,7 +1110,6 @@ function runWhileVisible(el,fn,ms){if(RM)return;let id=0;new IntersectionObserve
 })();
 
 /* ── HERO ENTRANCE ─────────────────────────────────────── */
-setTimeout(()=>document.getElementById('hbadge').classList.add('on'),180);
 setTimeout(()=>document.getElementById('hhl').classList.add('on'),440);
 setTimeout(()=>document.getElementById('hdiv').classList.add('on'),680);
 setTimeout(()=>document.getElementById('hcopy').classList.add('on'),840);
