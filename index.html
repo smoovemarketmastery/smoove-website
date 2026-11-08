@@ -423,11 +423,14 @@ ul{list-style:none}
 /* Phone mockup next to monitor */
 .isc-devices{display:flex;align-items:flex-end;gap:18px;width:100%}
 .isc-devices .laptop-wrap{flex:1;min-width:0}
-.phone-mock{flex-shrink:0;width:96px;background:linear-gradient(145deg,#1e2024 0%,#111316 55%,#1a1d21 100%);border-radius:28px;padding:7px;box-shadow:0 20px 48px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.07),inset 0 1px 0 rgba(255,255,255,.06)}
-.phone-screen-w{background:#000;border-radius:21px;overflow:hidden;position:relative}
-.phone-island{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:32px;height:9px;background:#000;border-radius:7px;z-index:2}
-.phone-img{width:100%;display:block;aspect-ratio:9/19.5;object-fit:cover;object-position:top center}
-.phone-home{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:30px;height:3px;border-radius:2px;background:rgba(255,255,255,.35);z-index:2}
+/* iPhone 15 Pro mockup: the owner's IPhoneMockup component (space black). Sizes are the
+   component's logical px divided by its 417px outer width, in container units. */
+.iphone{flex-shrink:0;width:104px;container-type:inline-size}
+.iphone-frame{aspect-ratio:417/876;padding:2.878cqw;border-radius:16.31cqw;background:linear-gradient(135deg,#1e2025 0%,#1c1e22 40%,#181a1d 100%);box-shadow:0 12px 30px rgba(0,0,0,.35),0 2px 6px rgba(0,0,0,.22);box-sizing:border-box;overflow:hidden}
+.iphone-screen{position:relative;width:100%;height:100%;border-radius:13.43cqw;overflow:hidden;background:#000;box-shadow:inset 0 0 0 1px rgba(255,255,255,.03),inset 0 10px 20px rgba(0,0,0,.35),inset 0 -8px 16px rgba(0,0,0,.28)}
+.iphone-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.iphone-island{position:absolute;top:2.878cqw;left:50%;transform:translateX(-50%);width:30.22cqw;height:8.87cqw;border-radius:4.8cqw;background:#000;box-shadow:0 1px 2px rgba(0,0,0,.7);z-index:2}
+.iphone-home{position:absolute;bottom:1.92cqw;left:50%;transform:translateX(-50%);width:32.04cqw;height:1.2cqw;border-radius:.72cqw;background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,.35));opacity:.9;z-index:3;pointer-events:none}
 /* Nav */
 .isc-nav{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:44px}
 .isc-arrow{background:none;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.6);font-size:15px;width:44px;height:44px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;font-family:var(--fm);flex-shrink:0}
@@ -473,7 +476,7 @@ ul{list-style:none}
   #worldMapWrap{height:320px}
 }
 /* Last, so no breakpoint above can show it on phones again. */
-@media(max-width:640px){.nc{display:none}.phone-mock{display:none}}
+@media(max-width:640px){.nc{display:none}.iphone{display:none}}
 </style>
 </head>
 <body>
@@ -649,13 +652,10 @@ ul{list-style:none}
             </div>
             <div class="isc-r">
               <div class="isc-devices">
-                <div class="phone-mock">
-                  <div class="phone-screen-w">
-                    <div class="phone-island"></div>
-                    <img src="images/slide-indicators.webp" width="640" height="1386" class="phone-img" loading="lazy" alt=""/>
-                    <div class="phone-home"></div>
-                  </div>
-                </div>
+                <div class="iphone"><div class="iphone-frame"><div class="iphone-screen">
+                  <img src="images/slide-indicators.webp" width="640" height="1386" class="iphone-img" loading="lazy" alt=""/>
+                  <div class="iphone-island"></div><div class="iphone-home"></div>
+                </div></div></div>
                 <div class="laptop-wrap">
                   <div class="laptop-screen">
                     <div class="laptop-screen-inner">
@@ -689,13 +689,10 @@ ul{list-style:none}
             </div>
             <div class="isc-r">
               <div class="isc-devices">
-                <div class="phone-mock">
-                  <div class="phone-screen-w">
-                    <div class="phone-island"></div>
-                    <img src="images/slide-course-mobile.webp" width="640" height="1386" class="phone-img" loading="lazy" alt=""/>
-                    <div class="phone-home"></div>
-                  </div>
-                </div>
+                <div class="iphone"><div class="iphone-frame"><div class="iphone-screen">
+                  <img src="images/slide-course-mobile.webp" width="640" height="1386" class="iphone-img" loading="lazy" alt=""/>
+                  <div class="iphone-island"></div><div class="iphone-home"></div>
+                </div></div></div>
                 <div class="laptop-wrap">
                   <div class="laptop-screen">
                     <div class="laptop-screen-inner">
@@ -726,13 +723,10 @@ ul{list-style:none}
             </div>
             <div class="isc-r">
               <div class="isc-devices">
-                <div class="phone-mock">
-                  <div class="phone-screen-w">
-                    <div class="phone-island"></div>
-                    <img src="images/slide-community-mobile.webp" width="640" height="1386" class="phone-img" loading="lazy" alt=""/>
-                    <div class="phone-home"></div>
-                  </div>
-                </div>
+                <div class="iphone"><div class="iphone-frame"><div class="iphone-screen">
+                  <img src="images/slide-community-mobile.webp" width="640" height="1386" class="iphone-img" loading="lazy" alt=""/>
+                  <div class="iphone-island"></div><div class="iphone-home"></div>
+                </div></div></div>
                 <div class="laptop-wrap">
                   <div class="laptop-screen">
                     <div class="laptop-screen-inner">
