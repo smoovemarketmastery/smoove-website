@@ -151,11 +151,12 @@ ul{list-style:none}
 .h-head.on{opacity:1;transform:none}
 .h-hl{
   font-family:var(--fd);font-weight:600;text-transform:uppercase;
-  font-size:clamp(34px,5vw,66px);line-height:1.02;letter-spacing:.01em;
-  max-width:18ch;color:var(--text);
+  font-size:clamp(22px,3.2vw,48px);line-height:1;letter-spacing:.04em;
+  white-space:nowrap;
 }
 .h-hl .g{color:var(--g)}
-@media(max-width:640px){.h-hl{font-size:clamp(30px,8.2vw,40px)}}
+.h-hl .w{color:rgba(255,255,255,.82)}
+@media(max-width:640px){.h-hl{white-space:normal;font-size:clamp(20px,5.5vw,32px)}}
 
 /* Hero sub-divider */
 .h-divider{
@@ -487,10 +488,10 @@ ul{list-style:none}
   <div class="h-veil"></div>
   <div class="h-grid"></div>
   <div class="h-inner">
-    <div class="h-badge" id="hbadge">$moove Market Mastery &bull; Works on FX &amp; Metals</div>
+    <div class="h-badge" id="hbadge">Built for NQ &amp; ES &bull; Works on FX &amp; Metals</div>
 
     <div class="h-head" id="hhl">
-      <h1 class="h-hl">Five TradingView indicators built for <span class="g">NQ &amp; ES</span>, and the course that teaches them.</h1>
+      <h1 class="h-hl"><span class="g">$MOOVE</span> <span class="w">MARKET MASTERY</span></h1>
     </div>
 
     <div class="h-divider" id="hdiv">
@@ -498,7 +499,7 @@ ul{list-style:none}
     </div>
 
     <p class="h-copy" id="hcopy">
-      This isn't for everyone. Indicators, an 18-lesson course and a members' Discord, all built on one framework: AMDX/QT, an ICT-style read of how NQ and ES deliver price.
+      This isn't for everyone. Five proprietary TradingView indicators, an 18-lesson course and a members' Discord, all built on one framework: AMDX/QT, an ICT-style read of how price is delivered on NQ and ES.
     </p>
 
     <div class="h-ctas" id="hctas">
