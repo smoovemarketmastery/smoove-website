@@ -80,12 +80,6 @@ ul{list-style:none}
   display:inline-block;cursor:pointer;transition:background .2s,transform .15s;
 }
 .btn-gd:hover{background:var(--gold2);transform:translateY(-2px)}
-.btn-sm{
-  font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
-  padding:13px 28px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.6);
-  display:inline-block;cursor:pointer;transition:all .2s;
-}
-.btn-sm:hover{border-color:rgba(0,255,135,.3);color:var(--g)}
 :focus-visible{outline:2px solid var(--g);outline-offset:2px;border-radius:1px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
@@ -188,7 +182,8 @@ ul{list-style:none}
   opacity:0;transition:opacity .5s .42s;
 }
 .h-ctas.on{opacity:1}
-.h-price{font-size:14px;line-height:1.6;color:rgba(255,255,255,.65);text-align:center;margin:-40px 0 48px;max-width:520px}
+.h-price{font-size:14px;line-height:1.6;color:rgba(255,255,255,.65);text-align:center;margin:-40px 0 48px;max-width:520px;opacity:0;transition:opacity .5s}
+.h-price.on{opacity:1}
 
 /* Hero stats row */
 .h-stats{
@@ -255,7 +250,6 @@ ul{list-style:none}
 .gc:hover{background:var(--card2)}
 .gc:hover::after,.gc.feat::after{transform:scaleX(1)}
 .gc.feat{background:var(--card2)}
-.gc-badge{font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#000;background:var(--g);padding:3px 10px;display:inline-block;position:absolute;top:16px;left:34px;z-index:2}
 .gc-icon{width:40px;height:40px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,255,135,.18);background:rgba(0,255,135,.05)}
 .gc-icon svg{width:20px;height:20px;stroke:var(--g);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .gc h3{font-family:var(--fd);font-size:19px;font-weight:700;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:12px;color:var(--text)}
@@ -363,8 +357,6 @@ ul{list-style:none}
 .pcb-p:hover{background:var(--g2);box-shadow:0 6px 28px rgba(0,0,0,.45);transform:translateY(-1px)}
 .pcb-o{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.1)}
 .pcb-o:hover{border-color:rgba(0,255,135,.25);transform:translateY(-1px)}
-.pcb-g{background:var(--gold);color:#000}
-.pcb-g:hover{background:var(--gold2);transform:translateY(-1px)}
 .pc-rule{height:1px;background:rgba(255,255,255,.05);margin-bottom:16px}
 .pc-incl{font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:11px}
 .pc-feats{display:flex;flex-direction:column}
@@ -605,7 +597,7 @@ ul{list-style:none}
       <a href="#pricing" class="btn-p">See Plans &amp; Pricing</a>
       <a href="#pillars" class="btn-gh">What's Included &darr;</a>
     </div>
-    <p class="h-price">Two plans: Indicators $124.99/mo or Full Program $247/mo. Annual billing saves up to $767.</p>
+    <p class="h-price" id="hprice">Two plans: Indicators $124.99/mo or Full Program $247/mo. Annual billing saves up to $767.</p>
 
     <div class="h-stats" id="hstats">
       <div class="hst"><span class="hst-v">NQ &amp; ES</span><span class="hst-l">Futures focus</span></div>
@@ -828,7 +820,7 @@ ul{list-style:none}
           <div class="isc-slide">
             <div class="isc-l">
               <h3 class="isc-name">The<br><span class="g">Community</span></h3>
-              <p class="isc-desc">An active Discord built for serious traders. Real-time trade ideas, daily bias breakdowns, live session coverage, and direct access to mentors who are trading the same setups you're learning.</p>
+              <p class="isc-desc">An active Discord built for serious traders. Trade ideas, daily bias breakdowns and live session coverage, built on the same framework you're learning.</p>
               <ul class="isc-feats">
                 <li>Daily pre-market bias &amp; levels</li>
                 <li>Live NQ &amp; ES session coverage</li>
@@ -911,7 +903,7 @@ ul{list-style:none}
       <div class="pc" id="card1" data-save="Save $401/yr">
         <img src="images/indicators-hero.webp" width="800" height="450" loading="lazy" alt="$moove Indicators" style="width:100%;border-radius:6px;margin-bottom:18px;display:block"/>
         <h3 class="pc-name">Indicators</h3>
-        <p class="pc-desc">All $moove TradingView indicators — built on NQ &amp; ES, works across Futures, FX &amp; Metals. Cancel anytime.</p>
+        <p class="pc-desc">All $moove TradingView indicators — built on NQ &amp; ES, works across Futures, FX &amp; Metals.</p>
         <div class="pc-amount"><span class="pc-dlr">$</span><span class="pc-num" id="p1v">124.99</span><span class="pc-per" id="p1per">/mo USD</span></div>
         <div class="pc-save" id="p1save"></div>
         <div style="display:flex;align-items:center;gap:7px;margin-bottom:12px;padding:8px 12px;background:rgba(0,255,135,.04);border:1px solid rgba(0,255,135,.12);border-radius:3px">
@@ -1071,7 +1063,7 @@ ul{list-style:none}
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-qt">How is $moove different from other trading programs?</span><span class="faq-ic">+</span></button>
-          <div class="faq-a">Most programs sell generic concepts and repackaged ideas. $moove is built around a specific methodology — 5 proprietary TradingView indicators covering the full ICT price delivery cycle, a course built specifically for NQ &amp; ES futures, a live community active during market hours, and a real application pathway to MT5 algorithmic trading on XAUUSD. It's one system built for intermediate and advanced NQ and ES traders.</div>
+          <div class="faq-a">Most programs sell generic concepts and repackaged ideas. $moove is built around a specific methodology — 5 proprietary TradingView indicators covering the full ICT price delivery cycle, a course built specifically for NQ &amp; ES futures, a members' Discord, and a real application pathway to MT5 algorithmic trading on XAUUSD. It's one system built for intermediate and advanced NQ and ES traders.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-qt">Do you offer a refund policy?</span><span class="faq-ic">+</span></button>
@@ -1200,6 +1192,7 @@ setTimeout(()=>document.getElementById('hhl').classList.add('on'),440);
 setTimeout(()=>document.getElementById('hdiv').classList.add('on'),680);
 setTimeout(()=>document.getElementById('hcopy').classList.add('on'),840);
 setTimeout(()=>document.getElementById('hctas').classList.add('on'),1000);
+setTimeout(()=>document.getElementById('hprice').classList.add('on'),1080);
 setTimeout(()=>document.getElementById('hstats').classList.add('on'),1160);
 
 /* ── SPOTLIGHT CARDS ───────────────────────────────────── */
