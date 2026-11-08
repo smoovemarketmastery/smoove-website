@@ -41,11 +41,10 @@ h1,h2,h3,.sh{text-wrap:balance}
 p,li{text-wrap:pretty}
 img{height:auto}
 :root{
-  --g:#00FF87;--g2:#00CC6A;--g3:rgba(0,255,135,.08);
-  --gold:#FFB300;--gold2:#cc8f00;
+  --g:#00FF87;--g2:#00CC6A;
   --bg:#04040A;--bg2:#06060F;--bg3:#050510;
   --card:#0D0D1A;--card2:#111120;
-  --b:rgba(255,255,255,.05);--bl:rgba(0,255,135,.08);
+  --b:rgba(255,255,255,.05);
   --text:#F0F0F8;--muted:#7878A8;
   --fd:'Barlow',sans-serif;
   --fm:'Space Mono',monospace;
@@ -132,7 +131,6 @@ ul{list-style:none}
 .h-inner::before{content:'';position:absolute;inset:6% 0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 60% 55% at 50% 50%,rgba(4,4,10,.86) 0%,rgba(4,4,10,.6) 55%,transparent 80%)}
 .h-inner{position:relative;z-index:4;max-width:1280px;margin:0 auto;padding:120px 60px 80px;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center}
 
-/* Hero badge */
 
 /* Hero headline */
 .h-head{
@@ -289,7 +287,6 @@ ul{list-style:none}
 .pc-feats li:last-child{border-bottom:none}
 .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;background:rgba(255,255,255,.12)}
 .dot.g{background:var(--g)}
-.pr-note{text-align:center;margin:28px auto 0;max-width:620px;font-size:14px;line-height:1.7;color:rgba(255,255,255,.65)}
 
 /* ── EDGE / EVERVAULT ─────────────────────────────────────── */
 .edge-sec{background:var(--bg3);border-bottom:1px solid var(--b)}
@@ -446,7 +443,7 @@ ul{list-style:none}
 /* ── SCROLL REVEAL ──────────────────────────────────────── */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
 .rv.in{opacity:1;transform:none}
-.d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.34s}
+.d1{transition-delay:.1s}.d2{transition-delay:.22s}
 
 /* ── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width:1060px){
