@@ -4,7 +4,9 @@ set -u
 SITE=https://smoovemarketmastery.com
 fail=0
 bad(){ echo "FAIL: $1"; fail=1; }
-code(){ curl -sL -o /dev/null -w '%{http_code}' -A 'Mozilla/5.0 smoove-canary' --max-time 20 "$1"; }
+# prints the HTTP status, or 000 when curl itself fails (DNS, timeout, TLS)
+code(){ local c; c=$(curl -sL -o /dev/null -w '%{http_code}' -A 'Mozilla/5.0 smoove-canary' --max-time 20 "$1") || c=000; echo "${c: -3}"; }
+ok(){ [ "$1" != 000 ] && [ "$1" -lt 400 ]; }
 
 html=$(curl -sL --max-time 20 "$SITE/") || bad "home page did not load"
 for s in 'MARKET MASTERY' 'id="pricing"' 'whop.com' '<footer'; do
@@ -16,8 +18,10 @@ done
 for u in $(grep -oE '(src|href)="images/[^"]+"' <<<"$html" | cut -d'"' -f2 | sort -u) images/social-preview.jpg; do
   c=$(code "$SITE/$u"); [ "$c" = 200 ] || bad "$u returned $c"
 done
-for u in $(grep -oE 'https://whop\.com/[^"]+' <<<"$html" | sort -u); do
-  c=$(code "$u"); [ "$c" -lt 400 ] || bad "checkout link $u returned $c"
+links=$(grep -oE "https://whop\.com/[^\"' )]+" <<<"$html" | sort -u)
+[ -n "$links" ] || bad "no Whop checkout links found on the home page"
+for u in $links; do
+  c=$(code "$u"); ok "$c" || bad "checkout link $u returned $c"
 done
-[ $fail = 0 ] && echo "All checks passed."
+[ $fail = 0 ] && echo "All checks passed ($(wc -w <<<"$links") checkout links)."
 exit $fail

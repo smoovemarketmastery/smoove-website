@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<script>document.documentElement.classList.add('js')</script>
+<script>document.documentElement.classList.add('js');addEventListener('error',function(e){if(!e.target||e.target===window)document.documentElement.classList.remove('js')})</script>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>$moove Market Mastery | Futures, FX & Metals Trading</title>
 <meta name="description" content="NQ &amp; ES futures trading education: proprietary TradingView indicators, a structured course and a members’ community."/>
@@ -141,6 +141,7 @@ main:focus{outline:none}
   animation:hUp .7s cubic-bezier(.16,1,.3,1) .44s both;
 }
 @keyframes hUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes hUp10{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @keyframes hFade{from{opacity:0}to{opacity:1}}
 .h-hl{
   font-family:var(--fd);font-weight:600;text-transform:uppercase;
@@ -162,7 +163,7 @@ main:focus{outline:none}
 .h-copy{
   font-size:16px;color:rgba(255,255,255,.65);line-height:1.8;
   max-width:580px;margin-bottom:40px;font-weight:400;
-  animation:hUp .5s 1.14s both;
+  animation:hUp10 .5s 1.14s both;
 }
 
 .h-ctas{
