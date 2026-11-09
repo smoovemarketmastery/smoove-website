@@ -828,7 +828,7 @@ main:focus{outline:none}
           <span style="width:5px;height:5px;border-radius:50%;background:var(--g);flex-shrink:0"></span>
           <span style="font-size:13px;line-height:1.5;color:rgba(0,255,135,.85)">TradingView username required at checkout</span>
         </div>
-        <button class="pc-btn pcb-s" id="btn1" onclick="window.open('https://whop.com/checkout/plan_3TJTY9x6shzpz','_blank')">Get Indicators</button>
+        <button class="pc-btn pcb-s" id="btn1" onclick="window.open('https://whop.com/checkout/plan_3TJTY9x6shzpz','_blank','noopener')">Get Indicators</button>
         <p class="pc-assure">Checkout opens on Whop in a new tab. Indicators are added to your TradingView account within 24 hours. All sales final; cancel monthly anytime.</p>
         <div class="pc-rule"></div>
         <div class="pc-incl">Includes</div>
@@ -855,7 +855,7 @@ main:focus{outline:none}
           <span style="width:5px;height:5px;border-radius:50%;background:var(--g);flex-shrink:0"></span>
           <span style="font-size:13px;line-height:1.5;color:rgba(0,255,135,.85)">TradingView username required at checkout</span>
         </div>
-        <button class="pc-btn pcb-p" id="btn2" onclick="window.open('https://whop.com/checkout/plan_G1kXYvouTIfLT','_blank')">Join Full Program</button>
+        <button class="pc-btn pcb-p" id="btn2" onclick="window.open('https://whop.com/checkout/plan_G1kXYvouTIfLT','_blank','noopener')">Join Full Program</button>
         <p class="pc-assure">Checkout opens on Whop in a new tab. The course and Discord unlock right away; indicators are added within 24 hours. All sales final; cancel monthly anytime.</p>
         <div class="pc-rule"></div>
         <div class="pc-incl">Includes</div>
@@ -1139,8 +1139,8 @@ function setTog(mode){
     document.getElementById('p1save').textContent='Works out to $91.58/mo. Save $401 a year.';
     document.getElementById('p2save').textContent='Works out to $183.08/mo. Save $767 a year.';
     if(sp) sp.classList.add('show');
-    if(b1) b1.onclick=()=>window.open('https://whop.com/checkout/plan_vOR8D7lM6G5B9','_blank');
-    if(b2) b2.onclick=()=>window.open('https://whop.com/checkout/plan_2drTjYQjrZoQf','_blank');
+    if(b1) b1.onclick=()=>window.open('https://whop.com/checkout/plan_vOR8D7lM6G5B9','_blank','noopener');
+    if(b2) b2.onclick=()=>window.open('https://whop.com/checkout/plan_2drTjYQjrZoQf','_blank','noopener');
   } else {
     btnMo.classList.add('on');btnYr.classList.remove('on');btnMo.setAttribute('aria-pressed','true');btnYr.setAttribute('aria-pressed','false');
     pill.style.left=btnMo.offsetLeft+'px';pill.style.width=btnMo.offsetWidth+'px';
@@ -1150,8 +1150,8 @@ function setTog(mode){
     document.getElementById('p1save').textContent='';
     document.getElementById('p2save').textContent='';
     if(sp) sp.classList.remove('show');
-    if(b1) b1.onclick=()=>window.open('https://whop.com/checkout/plan_3TJTY9x6shzpz','_blank');
-    if(b2) b2.onclick=()=>window.open('https://whop.com/checkout/plan_G1kXYvouTIfLT','_blank');
+    if(b1) b1.onclick=()=>window.open('https://whop.com/checkout/plan_3TJTY9x6shzpz','_blank','noopener');
+    if(b2) b2.onclick=()=>window.open('https://whop.com/checkout/plan_G1kXYvouTIfLT','_blank','noopener');
   }
 }
 window.addEventListener('load',()=>{
@@ -1222,7 +1222,7 @@ function iscGo(idx){iscIdx=idx;iscUpdate()}
   const CW=800,CH=400;
   let lpx=null;
   try{
-    const resp=await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json');
+    const resp=await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/land-110m.json',{integrity:'sha384-5oFOGoMd0tkagYW08lVco4uAi7XDEDBwBxOdeKx+SA1ihbsHiR/aFAJGretluTzG'});
     const topo=await resp.json();
     const{scale:[sx,sy],translate:[tx,ty]}=topo.transform;
     const raw=topo.arcs;
