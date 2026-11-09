@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
+<script>document.documentElement.classList.add('js');addEventListener('error',function(e){if(!e.target||e.target===window)document.documentElement.classList.remove('js')})</script>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>$moove Market Mastery | Futures, FX & Metals Trading</title>
 <meta name="description" content="NQ &amp; ES futures trading education: proprietary TradingView indicators, a structured course and a members’ community."/>
@@ -31,7 +32,8 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/></noscript>
 
 <style>
 /* ── RESET & BASE ─────────────────────────────────────────── */
@@ -76,7 +78,8 @@ ul{list-style:none}
 }
 .btn-gh:hover{border-color:rgba(0,255,135,.4);color:var(--g)}
 :focus-visible{outline:2px solid var(--g);outline-offset:2px;border-radius:1px}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+main:focus{outline:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
 /* ── NAV ─────────────────────────────────────────────────── */
 .nav{
@@ -135,9 +138,11 @@ ul{list-style:none}
 /* Hero headline */
 .h-head{
   margin-bottom:24px;
-  opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);
+  animation:hUp .7s cubic-bezier(.16,1,.3,1) .44s both;
 }
-.h-head.on{opacity:1;transform:none}
+@keyframes hUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes hUp10{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes hFade{from{opacity:0}to{opacity:1}}
 .h-hl{
   font-family:var(--fd);font-weight:600;text-transform:uppercase;
   font-size:clamp(22px,3.2vw,48px);line-height:1;letter-spacing:.04em;
@@ -150,34 +155,29 @@ ul{list-style:none}
 /* Hero sub-divider */
 .h-divider{
   display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:20px;
-  opacity:0;transition:opacity .5s .22s;
+  animation:hFade .5s .9s both;
 }
-.h-divider.on{opacity:1}
 .h-divider::before,.h-divider::after{content:'';flex:0 0 40px;height:1px;background:rgba(0,255,135,.25)}
 .h-divider span{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 
 .h-copy{
   font-size:16px;color:rgba(255,255,255,.65);line-height:1.8;
   max-width:580px;margin-bottom:40px;font-weight:400;
-  opacity:0;transform:translateY(10px);transition:opacity .5s .3s,transform .5s .3s;
+  animation:hUp10 .5s 1.14s both;
 }
-.h-copy.on{opacity:1;transform:none}
 
 .h-ctas{
   display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:64px;
-  opacity:0;transition:opacity .5s .42s;
+  animation:hFade .5s 1.42s both;
 }
-.h-ctas.on{opacity:1}
-.h-price{font-size:14px;line-height:1.6;color:rgba(255,255,255,.65);text-align:center;margin:-40px 0 48px;max-width:520px;opacity:0;transition:opacity .5s}
-.h-price.on{opacity:1}
+.h-price{font-size:14px;line-height:1.6;color:rgba(255,255,255,.65);text-align:center;margin:-40px 0 48px;max-width:520px;animation:hFade .5s 1.08s both}
 
 /* Hero stats row */
 .h-stats{
   display:flex;border:1px solid rgba(0,255,135,.09);
   background:rgba(4,4,10,.8);
-  opacity:0;transition:opacity .5s .54s;
+  animation:hFade .5s 1.7s both;
 }
-.h-stats.on{opacity:1}
 .hst{padding:16px 28px;display:flex;flex-direction:column;gap:4px;border-right:1px solid rgba(0,255,135,.06)}
 .hst:last-child{border-right:none}
 .hst-v{font-family:var(--fd);font-size:19px;font-weight:700;color:var(--g);line-height:1}
@@ -261,8 +261,9 @@ ul{list-style:none}
 
 /* Price cards */
 .pcards{display:grid;grid-template-columns:repeat(2,1fr);max-width:920px;margin:0 auto;gap:1px;background:var(--b);border:1px solid var(--b)}
-.pc{position:relative;background:var(--card);padding:36px 28px;display:flex;flex-direction:column;opacity:0;transform:translateY(18px);filter:blur(4px);transition:opacity .55s,transform .55s,filter .55s,background .25s}
-.pc.in{opacity:1;transform:none;filter:none}
+.pc{position:relative;background:var(--card);padding:36px 28px;display:flex;flex-direction:column;transition:opacity .55s,transform .55s,filter .55s,background .25s}
+.js .pc{opacity:0;transform:translateY(18px);filter:blur(4px)}
+.js .pc.in{opacity:1;transform:none;filter:none}
 .pc.pop{background:var(--card2);box-shadow:inset 0 1px 0 rgba(0,255,135,.09)}
 .pc:hover{background:var(--card2)}
 .pc.pop:hover{background:#14142A}
@@ -441,8 +442,9 @@ ul{list-style:none}
 }
 
 /* ── SCROLL REVEAL ──────────────────────────────────────── */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
-.rv.in{opacity:1;transform:none}
+.rv{transition:opacity .65s ease,transform .65s ease}
+.js .rv{opacity:0;transform:translateY(22px)}
+.js .rv.in{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.22s}
 
 /* ── RESPONSIVE ─────────────────────────────────────────── */
@@ -494,8 +496,9 @@ ul{list-style:none}
   <button class="ham" id="ham" aria-label="Menu" aria-expanded="false" aria-controls="nl"><span></span><span></span><span></span></button>
 </nav>
 
+<main id="main-content" tabindex="-1">
 <!-- ═══ HERO ════════════════════════════════════════════════ -->
-<section class="hero" id="home" tabindex="-1"><span id="main-content" style="position:absolute;top:0"></span>
+<section class="hero" id="home" tabindex="-1">
   <canvas id="heroBg"></canvas>
   <div class="h-veil"></div>
   <div class="h-grid"></div>
@@ -961,6 +964,8 @@ ul{list-style:none}
   </div>
 </section>
 
+</main>
+
 <!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
 <footer class="footer" id="contact">
   <div class="footer-in">
@@ -1096,14 +1101,6 @@ requestAnimationFrame(()=>document.getElementById('heroBg').classList.add('on'))
   const faq=document.getElementById('faq-email');
   if(faq){faq.innerHTML='<a href="mailto:'+email+'" style="color:var(--g)">'+email+'</a>';}
 })();
-
-/* ── HERO ENTRANCE ─────────────────────────────────────── */
-setTimeout(()=>document.getElementById('hhl').classList.add('on'),440);
-setTimeout(()=>document.getElementById('hdiv').classList.add('on'),680);
-setTimeout(()=>document.getElementById('hcopy').classList.add('on'),840);
-setTimeout(()=>document.getElementById('hctas').classList.add('on'),1000);
-setTimeout(()=>document.getElementById('hprice').classList.add('on'),1080);
-setTimeout(()=>document.getElementById('hstats').classList.add('on'),1160);
 
 /* ── SPOTLIGHT CARDS ───────────────────────────────────── */
 document.addEventListener('pointermove',e=>{
